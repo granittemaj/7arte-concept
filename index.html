@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 Arte — Mitrovicë, Kosovë</title>
+<meta name="description" content="7arte është organizatë kulturore me zyre në Mitrovicë, e cila mbështetë artistët kosovarë dhe promovon e zhvillon kulturë të përbashkët evropiane.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<script>
+function lgFall(img){
+  var a=['https://www.7-arte.org/wp-content/uploads/2018/01/7arte-logo-square-png-1.png','https://www.7-arte.org/wp-content/uploads/2017/07/cropped-Logo_identity.png'];
+  var n=+(img.dataset.try||0);
+  if(n<a.length){img.dataset.try=n+1;img.src=a[n]}else{img.parentNode.classList.add('fallback')}
+}
+</script>
+<div id="prog"></div>
+
+<div class="util"><div class="wrap">
+  <div><a href="#/faq">FAQ</a><a href="#/contact" data-sq="Kontakt" data-en="Contact">Kontakt</a><a href="#/services" data-sq="Shërbime" data-en="Services">Shërbime</a><a href="#/jobs" data-sq="Punë" data-en="Jobs">Punë</a></div>
+  <div class="r">
+    <button class="srchBtn" id="openSrch">⌕ <span data-sq="Kërko" data-en="Search">Kërko</span></button>
+    <div class="lang"><button id="bSQ" class="on">SQ</button><button id="bEN">EN</button></div>
+  </div>
+</div></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#/">
+      <img src="https://mitro.run/wp-content/uploads/2026/08/logo-7arte-new-removebg-preview-e1787318113237-294x300.png" alt="7 Arte" onerror="lgFall(this)">
+      <b class="lgtxt">7arte</b>
+      <span class="xmark" id="xmark" style="display:none"><span data-sq="Projekt i" data-en="A project by">Projekt i</span><b id="xmarkName"></b></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#/" data-sq="Intro" data-en="Intro">Intro</a>
+      <div class="dd"><button data-sq="Rreth nesh" data-en="About us">Rreth nesh<span class="ar">▾</span></button><div class="dm">
+        <a href="#/about" data-sq="Rreth 7 Arte" data-en="About 7 Arte">Rreth 7 Arte</a>
+        <a href="#/history" data-sq="Historia" data-en="History">Historia</a>
+        <a href="#/staff" data-sq="Stafi" data-en="Staff">Stafi</a>
+        <a href="#/info" data-sq="Informata" data-en="Information">Informata</a>
+        <a href="#/contact" data-sq="Kontakt" data-en="Contact">Kontakt</a>
+      </div></div>
+      <a href="#/news" data-sq="Lajme" data-en="News">Lajme</a>
+      <div class="dd"><button data-sq="Projekte" data-en="Projects">Projekte<span class="ar">▾</span></button><div class="dm">
+        <div class="hd" data-sq="Projekte aktuale" data-en="Current projects">Projekte aktuale</div>
+        <a href="#/greenfest">Green Fest</a><a href="#/trepca">Visit Trepça</a><a href="#/mitrorun">MitroRun</a>
+        <a href="#/culture" data-sq="Sfidat e zhvillimit kulturor" data-en="Cultural development challenges">Sfidat e zhvillimit kulturor</a>
+        <div class="hd" data-sq="Të mëparshme" data-en="Earlier">Të mëparshme</div>
+        <a href="#/past" data-sq="Arkivi i projekteve" data-en="Project archive">Arkivi i projekteve</a>
+      </div></div>
+      <div class="dd"><button>7Arte Academy<span class="ar">▾</span></button><div class="dm">
+        <a href="#/academy" data-sq="Të gjitha trajnimet" data-en="All trainings">Të gjitha trajnimet</a>
+        <a href="#/ac-gd">Graphic Design</a><a href="#/ac-film">Filmmaking</a>
+        <a href="#/ac-3d">3D Animation</a>
+        <a href="#/ac-arch" data-sq="Arkitekturë e qëndrueshme" data-en="Sustainable architecture">Arkitekturë e qëndrueshme</a>
+      </div></div>
+      <div class="dd"><button data-sq="Publikime" data-en="Publications">Publikime<span class="ar">▾</span></button><div class="dm">
+        <a href="#/publications" data-sq="Të gjitha" data-en="All">Të gjitha</a>
+        <a href="#/reports-annual" data-sq="Raporte vjetore" data-en="Annual reports">Raporte vjetore</a>
+        <a href="#/reports-project" data-sq="Raporte projektesh" data-en="Project reports">Raporte projektesh</a>
+        <a href="#/research" data-sq="Hulumtime" data-en="Research">Hulumtime</a>
+        <a href="#/jobs" data-sq="Punë" data-en="Jobs">Punë</a>
+      </div></div>
+      <a href="#/services" data-sq="Shërbime" data-en="Services">Shërbime</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <a class="sup" href="#/support" data-sq="Na mbështet" data-en="Support us">Na mbështet</a>
+      <button class="burg" id="burg" aria-label="Menu">≡</button>
+    </div>
+  </div>
+</header>
+
+<!-- project sub-navs -->
+<div class="subnav" id="sn-gf"><div class="wrap">
+  <div class="lks"><a href="#/greenfest" style="color:var(--c);font-weight:800">Green Fest</a><a href="#gf-about" data-sq="Rreth" data-en="About">Rreth</a><a href="#gf-prog" data-sq="Programi" data-en="Programme">Programi</a><a href="#gf-lineup">Line-up</a><a href="#gf-news" data-sq="Lajme" data-en="News">Lajme</a><a href="#gf-gal" data-sq="Galeria" data-en="Gallery">Galeria</a><a href="#gf-part" data-sq="Sponsorë" data-en="Sponsors">Sponsorë</a></div>
+  <div style="display:flex;gap:12px;align-items:center"><a class="act" href="#gf-vol" data-sq="Bëhu vullnetar" data-en="Volunteer">Bëhu vullnetar</a><a class="back" href="#/">← 7arte</a></div>
+</div></div>
+<div class="subnav" id="sn-vt"><div class="wrap">
+  <div class="lks"><a href="#/trepca" style="color:var(--c);font-weight:800">Visit Trepça</a><a href="#vt-about" data-sq="Historia" data-en="History">Historia</a><a href="#vt-tours" data-sq="Turat" data-en="Tours">Turat</a><a href="#vt-mem" data-sq="Kujtesa" data-en="Memory">Kujtesa</a><a href="#vt-shop" data-sq="Dyqani" data-en="Shop">Dyqani</a><a href="#vt-news" data-sq="Lajme" data-en="News">Lajme</a><a href="#vt-gal" data-sq="Galeria" data-en="Gallery">Galeria</a></div>
+  <div style="display:flex;gap:12px;align-items:center"><a class="act" href="#vt-book" data-sq="Rezervo turë" data-en="Book a tour">Rezervo turë</a><a class="back" href="#/">← 7arte</a></div>
+</div></div>
+<div class="subnav" id="sn-mr"><div class="wrap">
+  <div class="lks"><a href="#/mitrorun" style="color:var(--c);font-weight:800">MitroRun</a><a href="#mr-races" data-sq="Garat" data-en="Races">Garat</a><a href="#mr-prizes" data-sq="Shpërblimet" data-en="Prizes">Shpërblimet</a><a href="#mr-pack" data-sq="Pakoja" data-en="Pack">Pakoja</a><a href="#mr-news" data-sq="Lajme" data-en="News">Lajme</a><a href="#mr-gal" data-sq="Galeria" data-en="Gallery">Galeria</a></div>
+  <div style="display:flex;gap:12px;align-items:center"><a class="act" href="https://mitro.run" target="_blank" data-sq="Regjistrohu" data-en="Register">Regjistrohu</a><a class="back" href="#/">← 7arte</a></div>
+</div></div>
+<div class="subnav" id="sn-ac"><div class="wrap">
+  <div class="lks"><a href="#/academy" style="color:var(--c);font-weight:800">7Arte Academy</a><a href="#ac-list" data-sq="Trajnimet" data-en="Trainings">Trajnimet</a><a href="#ac-how" data-sq="Si funksionon" data-en="How it works">Si funksionon</a><a href="#ac-news" data-sq="Lajme" data-en="News">Lajme</a></div>
+  <div style="display:flex;gap:12px;align-items:center"><a class="act" href="#ac-apply" data-sq="Apliko" data-en="Apply">Apliko</a><a class="back" href="#/">← 7arte</a></div>
+</div></div>
+
+<div id="srch">
+  <button class="cl" id="closeSrch">✕</button>
+  <div class="in"><input id="sInput" placeholder="Kërko në 7arte.org…" autocomplete="off"></div>
+  <div class="hint" data-sq="Shkruaj për të kërkuar · ESC për të mbyllur" data-en="Type to search · ESC to close">Shkruaj për të kërkuar · ESC për të mbyllur</div>
+  <div class="res" id="sRes"></div>
+</div>
+
+<!-- ==================== 7ARTE HOME ==================== -->
+<main class="page live" id="p-home">
+  <div class="hero"><div class="wrap">
+    <div class="pixbig">
+      <i></i><i class="a"></i><i class="c"></i><i></i><i class="b"></i><i class="c"></i>
+      <i class="a"></i><i></i><i class="b"></i><i class="c"></i><i></i><i class="a"></i>
+      <i class="c"></i><i class="b"></i><i></i><i class="a"></i><i class="c"></i><i></i>
+    </div>
+    <div class="row">
+      <h1><span data-sq="Kultura" data-en="Culture">Kultura</span> <em data-sq="e lëviz" data-en="moves">e lëviz</em><br><span data-sq="këtë qytet." data-en="this city.">këtë qytet.</span></h1>
+      <p class="lede" style="max-width:34ch" data-sq="Organizatë kulturore në Mitrovicë që nga 2 maji i vitit 2006. Një festival, një minierë që mund ta vizitosh, një garë e qytetit dhe një shkollë." data-en="A cultural organisation in Mitrovica since 2 May 2006. A festival, a mine you can visit, a city race and a school.">Organizatë kulturore në Mitrovicë që nga 2 maji i vitit 2006. Një festival, një minierë që mund ta vizitosh, një garë e qytetit dhe një shkollë.</p>
+    </div>
+    <div class="slider" id="slider">
+      <div class="slide on"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/09/StageGF16.jpg" alt=""></div>
+      <div class="slide"><img src="https://visittrepca.com/wp-content/uploads/2026/05/051A0140-scaled.jpg" alt=""></div>
+      <div class="slide"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_9-1080x675.jpg" alt=""></div>
+      <div class="slide"><img src="https://www.7-arte.org/wp-content/uploads/2026/05/20260421_153006-scaled.jpg" alt=""></div>
+      <div class="veil"></div>
+      <span class="sq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      <div class="arrows"><button id="sPrev">‹</button><button id="sNext">›</button></div>
+      <div class="cap"><div class="t" id="sCap"></div><div class="sdots" id="sDots"></div></div>
+    </div>
+  </div></div>
+
+  <div class="wrap"><div class="stats" id="stats">
+    <div class="stat"><b data-cnt="2006" data-raw>2006</b><span data-sq="Themeluar" data-en="Founded">Themeluar</span></div>
+    <div class="stat"><b data-cnt="16">0</b><span data-sq="Edicione Green Fest" data-en="Green Fest editions">Edicione Green Fest</span></div>
+    <div class="stat"><b data-cnt="4">0</b><span data-sq="Projekte aktive" data-en="Active projects">Projekte aktive</span></div>
+    <div class="stat"><b data-cnt="1303" data-raw>1303</b><span data-sq="Trepça e shënuar së pari" data-en="Trepça first recorded">Trepça e shënuar së pari</span></div>
+  </div></div>
+
+  <section>
+    <div class="wrap">
+      <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Projektet tona" data-en="Our projects">Projektet tona</span></div>
+      <h2 class="obs" style="margin-bottom:clamp(22px,3.2vw,44px)"><span data-sq="Secili me" data-en="Each with">Secili me</span> <em data-sq="identitetin e vet." data-en="its own identity.">identitetin e vet.</em></h2>
+      <div class="tiles obs">
+        <a class="tile" href="#/greenfest" style="--pc:#4E8F13">
+          <div class="bg"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/09/StageGF16.jpg" alt=""></div>
+          <span class="sq"><i></i><i class="o"></i><i></i><i class="o"></i><i></i><i class="o"></i></span>
+          <h3>Green Fest</h3>
+          <p data-sq="Festival multidisiplinar për mjedisin dhe kulturën. Gjashtëmbëdhjetë edicione, pesë ditë çdo vit." data-en="A multidisciplinary festival about environment and culture. Sixteen editions, five days every year.">Festival multidisiplinar për mjedisin dhe kulturën. Gjashtëmbëdhjetë edicione, pesë ditë çdo vit.</p>
+          <span class="go" data-sq="Hap faqen" data-en="Open site">Hap faqen<span>→</span></span>
+        </a>
+        <a class="tile" href="#/trepca" style="--pc:#57379B">
+          <div class="bg"><img src="https://visittrepca.com/wp-content/uploads/2026/05/051A0140-scaled.jpg" alt=""></div>
+          <span class="sq"><i></i><i class="o"></i><i></i><i class="o"></i><i></i><i class="o"></i></span>
+          <h3>Visit Trepça</h3>
+          <p data-sq="Trashëgimia industriale e Trepçës, e hapur për vizitorë. Tura, kujtesë dhe dyqan." data-en="The industrial heritage of Trepça, open to visitors. Tours, memory and a shop.">Trashëgimia industriale e Trepçës, e hapur për vizitorë. Tura, kujtesë dhe dyqan.</p>
+          <span class="go" data-sq="Hap faqen" data-en="Open site">Hap faqen<span>→</span></span>
+        </a>
+        <a class="tile" href="#/mitrorun" style="--pc:#C4431A">
+          <div class="bg"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_22-800x533.jpg" alt=""></div>
+          <span class="sq"><i></i><i class="o"></i><i></i><i class="o"></i><i></i><i class="o"></i></span>
+          <h3>MitroRun</h3>
+          <p data-sq="Vrapimi i qytetit. Tri distanca, një ditë, dhe një fundjavë që e nxjerr Mitrovicën jashtë." data-en="The city run. Three distances, one day, and a weekend that brings Mitrovica outside.">Vrapimi i qytetit. Tri distanca, një ditë, dhe një fundjavë që e nxjerr Mitrovicën jashtë.</p>
+          <span class="go" data-sq="Hap faqen" data-en="Open site">Hap faqen<span>→</span></span>
+        </a>
+        <a class="tile" href="#/academy" style="--pc:#114E9F">
+          <div class="bg"><img src="https://www.7-arte.org/wp-content/uploads/2026/02/051A9768-scaled.jpg" alt=""></div>
+          <span class="sq"><i></i><i class="o"></i><i></i><i class="o"></i><i></i><i class="o"></i></span>
+          <h3>7Arte Academy</h3>
+          <p data-sq="Trajnime praktike në dizajn, film, animacion dhe arkitekturë, për të rinjtë e Mitrovicës." data-en="Practical trainings in design, film, animation and architecture for young people in Mitrovica.">Trajnime praktike në dizajn, film, animacion dhe arkitekturë, për të rinjtë e Mitrovicës.</p>
+          <span class="go" data-sq="Hap faqen" data-en="Open site">Hap faqen<span>→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0"><div class="wrap"><div class="quote obs">
+    <div class="deco"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p data-sq="7arte është organizatë kulturore me zyre në Mitrovicë, e cila mbështetë artistët kosovarë, si dhe promovon e zhvillon kulturë të përbashkët evropiane." data-en="7arte is a cultural organisation based in Mitrovica that supports Kosovar artists and promotes and develops a shared European culture.">7arte është organizatë kulturore me zyre në Mitrovicë, e cila mbështetë artistët kosovarë, si dhe promovon e zhvillon kulturë të përbashkët evropiane.</p>
+  </div></div></section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Të reja" data-en="Latest">Të reja</span></div>
+      <h2 class="obs" style="margin-bottom:clamp(18px,2.6vw,34px)"><span data-sq="Çka po" data-en="What's">Çka po</span> <em data-sq="ndodh." data-en="happening.">ndodh.</em></h2>
+      <div class="filters obs" id="hf">
+        <button class="on" data-f="all" data-sq="Të gjitha" data-en="All">Të gjitha</button>
+        <button data-f="7arte">7 Arte</button><button data-f="gf">Green Fest</button>
+        <button data-f="vt">Visit Trepça</button><button data-f="ac">Academy</button>
+      </div>
+      <div class="nlist obs" id="hn">
+        <div class="ni" data-k="gf"><div class="dbox"><b>03</b><span>Sht</span></div><div class="th shot"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/09/StageGF16.jpg" alt=""></div><div class="tx"><b data-sq="Green Fest 16 mbyllet pas pesë ditësh nën temën REFLEKTO" data-en="Green Fest 16 closes after five days under the theme REFLEKTO">Green Fest 16 mbyllet pas pesë ditësh nën temën REFLEKTO</b><span>Green Fest · 2026</span></div></div>
+        <div class="ni" data-k="gf"><div class="dbox"><b>10</b><span>Kor</span></div><div class="th shot"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-10-at-1.39.35-PM.jpeg" alt=""></div><div class="tx"><b data-sq="REFLEKTO shpallet tema e edicionit të 16-të" data-en="REFLEKTO announced as the theme of the 16th edition">REFLEKTO shpallet tema e edicionit të 16-të</b><span>Green Fest · 2026</span></div></div>
+        <div class="ni" data-k="7arte"><div class="dbox"><b>09</b><span>Maj</span></div><div class="th shot"><img src="https://www.7-arte.org/wp-content/uploads/2026/05/694663324_1423858059771620_644636740689303126_n.jpg" alt=""></div><div class="tx"><b data-sq="7 Arte shënon 20-vjetorin me një kapitull të ri bashkëpunimi me Trepçën" data-en="7 Arte marks twenty years with a new chapter of cooperation with Trepça">7 Arte shënon 20-vjetorin me një kapitull të ri bashkëpunimi me Trepçën</b><span>7 Arte · 2026</span></div></div>
+        <div class="ni" data-k="vt"><div class="dbox"><b>05</b><span>Maj</span></div><div class="th shot"><img src="https://visittrepca.com/wp-content/uploads/2026/05/051A0140-scaled.jpg" alt=""></div><div class="tx"><b data-sq="Duke pritur vizitorë nga Zvicra në Trepçë" data-en="Welcoming visitors from Switzerland at Trepça">Duke pritur vizitorë nga Zvicra në Trepçë</b><span>Visit Trepça · 2026</span></div></div>
+        <div class="ni" data-k="7arte"><div class="dbox"><b>22</b><span>Prill</span></div><div class="th shot"><img src="https://www.7-arte.org/wp-content/uploads/2026/05/20260421_153006-scaled.jpg" alt=""></div><div class="tx"><b data-sq="7 Arte dhe Komuna e Mitrovicës nënshkruajnë marrëveshje për mbrojtjen e mjedisit" data-en="7 Arte and the Municipality sign an environmental protection agreement">7 Arte dhe Komuna e Mitrovicës nënshkruajnë marrëveshje për mbrojtjen e mjedisit</b><span>7 Arte · 2026</span></div></div>
+        <div class="ni" data-k="ac"><div class="dbox"><b>02</b><span>Mars</span></div><div class="th shot"><img src="https://www.7-arte.org/wp-content/uploads/2026/03/4b75a2bf-7103-4b6b-928d-5a3c3244875e.jpg" alt=""></div><div class="tx"><b data-sq="7Arte Academy hap thirrjen për trajnim në Graphic Design" data-en="7Arte Academy opens the call for Graphic Design training">7Arte Academy hap thirrjen për trajnim në Graphic Design</b><span>Academy · 2026</span></div></div>
+      </div>
+      <div style="margin-top:26px"><a class="sup" href="#/news" data-sq="Të gjitha lajmet" data-en="All news">Të gjitha lajmet</a></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Donatorët dhe partnerët tanë" data-en="Our donors and partners">Donatorët dhe partnerët tanë</span></div>
+      <div class="logos obs">
+        <div>Ministria e Kulturës</div><div>Sverige</div><div>Komuna e Mitrovicës</div>
+        <div>CDF</div><div>EECSOK</div><div>Trans Europe Halles</div>
+        <div>YEE</div><div>Lin Projekt</div><div>Raiffeisen</div>
+        <div>Finca</div><div>JYSK</div><div>Hotel Centrum</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0"><div class="wrap"><div class="cta obs">
+    <div class="deco"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <h2><span data-sq="Financo, bashkohu," data-en="Fund us, join us,">Financo, bashkohu,</span> <em data-sq="ose thjesht eja." data-en="or just turn up.">ose thjesht eja.</em></h2>
+    <a class="btn" href="mailto:info@7-arte.org">info@7-arte.org →</a>
+  </div></div></section>
+</main>
+
+<!-- ==================== GREEN FEST MICROSITE ==================== -->
+<main class="page" id="p-greenfest">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Projekte" data-en="Projects">Projekte</span> <em>/</em> Green Fest</div>
+    <div class="pjhead">
+      <h1>Green<br><em>Fest.</em></h1>
+      <p class="lede" data-sq="Festival multidisiplinar që përmban programe edukative dhe kulturore, me qëllim ndërgjegjësimin e shoqërisë për çështjet mjedisore dhe Objektivat e Zhvillimit të Qëndrueshëm." data-en="A multidisciplinary festival with educational and cultural programmes, aimed at raising public awareness about environmental issues and the Sustainable Development Goals.">Festival multidisiplinar që përmban programe edukative dhe kulturore, me qëllim ndërgjegjësimin e shoqërisë për çështjet mjedisore dhe Objektivat e Zhvillimit të Qëndrueshëm.</p>
+    </div>
+  </div>
+  <div class="marq"><div>
+    <span class="h">EDICIONI 16 · REFLEKTO</span><span>◆</span><span>MITROVICË</span><span>◆</span><span class="h">5 DITË</span><span>◆</span><span>GREEN TALKS</span><span>◆</span><span>KINEMAJA E HAPUR</span><span>◆</span><span class="h">PANAIRI I ARTIZANATEVE</span><span>◆</span>
+    <span class="h">EDICIONI 16 · REFLEKTO</span><span>◆</span><span>MITROVICË</span><span>◆</span><span class="h">5 DITË</span><span>◆</span><span>GREEN TALKS</span><span>◆</span><span>KINEMAJA E HAPUR</span><span>◆</span><span class="h">PANAIRI I ARTIZANATEVE</span><span>◆</span>
+  </div></div></div>
+
+  <section id="gf-about" style="padding-top:clamp(28px,4vw,56px)"><div class="wrap">
+    <div class="shot mos" data-cols="16" data-rows="7" style="aspect-ratio:16/7;border-radius:18px"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/09/StageGF16.jpg" alt=""></div>
+    <div class="stats" style="margin-top:clamp(26px,3.6vw,50px)">
+      <div class="stat"><b>16</b><span data-sq="Edicione" data-en="Editions">Edicione</span></div>
+      <div class="stat"><b>5</b><span data-sq="Ditë" data-en="Days">Ditë</span></div>
+      <div class="stat"><b>9</b><span data-sq="Emra të shpallur" data-en="Acts announced">Emra të shpallur</span></div>
+      <div class="stat"><b>21</b><span data-sq="Sponsorë dhe donatorë" data-en="Sponsors and donors">Sponsorë dhe donatorë</span></div>
+    </div>
+  </div></section>
+
+  <section id="gf-prog" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Programi" data-en="Programme">Programi</span></div>
+    <h2 class="obs" style="margin-bottom:clamp(20px,3vw,40px)"><span data-sq="Pesë fije," data-en="Five strands,">Pesë fije,</span> <em data-sq="një festival." data-en="one festival.">një festival.</em></h2>
+    <div class="five obs">
+      <div class="fv"><b>Green Talks</b><p data-sq="Debat publik për mjedisin, qytetin dhe çka të bëhet me të dyja." data-en="Public debate on the environment, the city and what to do about both.">Debat publik për mjedisin, qytetin dhe çka të bëhet me të dyja.</p></div>
+      <div class="fv"><b data-sq="Festivali i Muzikës" data-en="Music Festival">Festivali i Muzikës</b><p data-sq="Skena kryesore, dhe arsyeja pse vjen shumica e qytetit." data-en="The main stage, and the reason most of the city turns up.">Skena kryesore, dhe arsyeja pse vjen shumica e qytetit.</p></div>
+      <div class="fv"><b data-sq="Panairi i Artizanateve" data-en="Crafts Fair">Panairi i Artizanateve</b><p data-sq="Artizanë, prodhues dhe biznese vendore në qendër të qytetit." data-en="Makers, producers and local businesses in the centre of town.">Artizanë, prodhues dhe biznese vendore në qendër të qytetit.</p></div>
+      <div class="fv"><b>Green Kids</b><p data-sq="Punëtori dhe aktivitete për fëmijë dhe familje." data-en="Workshops and activities for children and families.">Punëtori dhe aktivitete për fëmijë dhe familje.</p></div>
+      <div class="fv"><b data-sq="Kinemaja e Hapur" data-en="Open Air Cinema">Kinemaja e Hapur</b><p data-sq="Filma për ndryshim, Art Urban dhe projeksione nën qiell të hapur." data-en="Films for change, Urban Art and screenings under the open sky.">Filma për ndryshim, Art Urban dhe projeksione nën qiell të hapur.</p></div>
+    </div>
+  </div></section>
+
+  <section id="gf-lineup" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span>Line-up</div>
+    <h2 class="obs" style="margin-bottom:clamp(18px,2.6vw,34px)"><span data-sq="Nëntë emra" data-en="Nine names">Nëntë emra</span> <em data-sq="deri tani." data-en="so far.">deri tani.</em></h2>
+    <div class="chips obs">
+      <span class="chip">Alban Skenderaj<span>Main</span></span><span class="chip">Shkodra Elektronike<span>Main</span></span>
+      <span class="chip">NR<span>Main</span></span><span class="chip">Lore<span>Main</span></span>
+      <span class="chip">BB Poqi<span>Green</span></span><span class="chip">Neritan<span>Green</span></span>
+      <span class="chip">Doroci<span>Green</span></span><span class="chip">Kurr'n'Jetë<span>Green</span></span><span class="chip">Dren<span>Green</span></span>
+    </div>
+  </div></section>
+
+  <section id="gf-news" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Lajmet e festivalit" data-en="Festival news">Lajmet e festivalit</span></div>
+    <div class="grid3 obs">
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/09/StageGF16.jpg" alt=""></div><div class="tag">03.09.2026</div><h4 data-sq="Green Fest 16, pesë ditë energji e përbashkët" data-en="Green Fest 16, five days of shared energy">Green Fest 16, pesë ditë energji e përbashkët</h4></article>
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-10-at-1.39.35-PM.jpeg" alt=""></div><div class="tag">10.07.2026</div><h4 data-sq="REFLEKTO shpallet tema e edicionit të 16-të" data-en="REFLEKTO announced as the theme of the 16th edition">REFLEKTO shpallet tema e edicionit të 16-të</h4></article>
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/05/a32b468e-8d01-4516-8ea7-79352ee58ad1.jpg" alt=""></div><div class="tag">25.05.2026</div><h4 data-sq="Thirrje për vullnetarë për edicionin e 16-të" data-en="Call for volunteers for the 16th edition">Thirrje për vullnetarë për edicionin e 16-të</h4></article>
+    </div>
+  </div></section>
+
+  <section id="gf-gal" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Galeria" data-en="Gallery">Galeria</span></div>
+    <div class="gal obs">
+      <div class="gi wide"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2023/06/Green123-scaled.jpg" alt=""></div>
+      <div class="gi"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/09/StageGF16.jpg" alt=""></div>
+      <div class="gi"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-10-at-1.39.35-PM.jpeg" alt=""></div>
+      <div class="gi"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/05/a32b468e-8d01-4516-8ea7-79352ee58ad1.jpg" alt=""></div>
+      <div class="gi"><img src="https://www.7-arte.org/wp-content/uploads/2025/03/2-scaled.jpg" alt=""></div>
+      <div class="gi"><img src="https://www.7-arte.org/wp-content/uploads/2026/01/15-scaled.jpg" alt=""></div>
+    </div>
+  </div></section>
+
+  <section id="gf-vol" style="padding-top:0"><div class="wrap grid2">
+    <div class="obs">
+      <h3 class="sub" data-sq="Bëhu pjesë" data-en="Get involved">Bëhu pjesë</h3>
+      <div class="rows">
+        <div class="rw"><span class="n">01</span><b data-sq="Bëhu vullnetar" data-en="Volunteer">Bëhu vullnetar</b><i data-sq="Thirrje e hapur" data-en="Open call">Thirrje e hapur</i></div>
+        <div class="rw"><span class="n">02</span><b data-sq="Rezervo tezgë në panair" data-en="Book a stand at the fair">Rezervo tezgë në panair</b><i data-sq="Artizanë" data-en="Makers">Artizanë</i></div>
+        <div class="rw"><span class="n">03</span><b data-sq="Dhuro për Green Fest" data-en="Donate to Green Fest">Dhuro për Green Fest</b><i data-sq="Mbështetje" data-en="Support">Mbështetje</i></div>
+        <div class="rw"><span class="n">04</span><b data-sq="Bëhu sponsor" data-en="Become a sponsor">Bëhu sponsor</b><i>info@7-arte.org</i></div>
+      </div>
+    </div>
+    <div class="obs" id="gf-part">
+      <h3 class="sub" data-sq="Sponsorë dhe donatorë" data-en="Sponsors and donors">Sponsorë dhe donatorë</h3>
+      <div class="logos" style="grid-template-columns:repeat(3,1fr)">
+        <div>Sverige</div><div>CDF</div><div>Komuna</div>
+        <div>Raiffeisen</div><div>Finca</div><div>JYSK</div>
+        <div>Smirnoff</div><div>Hotel Centrum</div><div>+ 13</div>
+      </div>
+    </div>
+  </div></section>
+</main>
+
+<!-- ==================== VISIT TREPÇA MICROSITE ==================== -->
+<main class="page" id="p-trepca">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Projekte" data-en="Projects">Projekte</span> <em>/</em> Visit Trepça</div>
+    <div class="pjhead">
+      <h1><span data-sq="Shtatë shekuj" data-en="Seven centuries">Shtatë shekuj</span><br><em data-sq="nën tokë." data-en="underground.">nën tokë.</em></h1>
+      <p class="lede" data-sq="Projekt pilot i iniciuar nga OJQ 7Arte, i dedikuar ruajtjes dhe promovimit të trashëgimisë industriale të Trepçës." data-en="A pilot project initiated by NGO 7Arte, dedicated to preserving and promoting the industrial heritage of Trepça.">Projekt pilot i iniciuar nga OJQ 7Arte, i dedikuar ruajtjes dhe promovimit të trashëgimisë industriale të Trepçës.</p>
+    </div>
+  </div></div>
+
+  <section id="vt-about" style="padding-top:clamp(24px,3.4vw,46px)"><div class="wrap grid2">
+    <div class="obs">
+      <div class="shot mos" data-cols="10" data-rows="8" style="aspect-ratio:4/3;border-radius:16px"><img src="https://visittrepca.com/wp-content/uploads/2023/10/Untitled-3-09-scaled.jpg" alt=""></div>
+    </div>
+    <div class="obs">
+      <h3 class="sub" data-sq="Historia e Trepçës" data-en="The history of Trepça">Historia e Trepçës</h3>
+      <p class="lede" data-sq="Minierat e Trepçës janë kompleks i madh industrial në Kosovë, nëntë kilometra në verilindje të Mitrovicës, me histori të pasur minerare që daton që nga koha romake, bazuar në dokumentin e arkivit të Dubrovnikut të vitit 1303." data-en="The Trepça mines are a large industrial complex in Kosovo, nine kilometres northeast of Mitrovica, with a rich mining history dating back to Roman times, based on a document in the Dubrovnik archive of 1303.">Minierat e Trepçës janë kompleks i madh industrial në Kosovë, nëntë kilometra në verilindje të Mitrovicës, me histori të pasur minerare që daton që nga koha romake, bazuar në dokumentin e arkivit të Dubrovnikut të vitit 1303.</p>
+      <div class="tl" style="margin-top:26px">
+        <div><b>1303</b><p data-sq="Shënimi i parë i shkruar mbi Trepçën, në arkivin e Dubrovnikut." data-en="The first written record of Trepça, in the Dubrovnik archive.">Shënimi i parë i shkruar mbi Trepçën, në arkivin e Dubrovnikut.</p></div>
+        <div><b>2023</b><p data-sq="Lansohet projekti pilot Visit Trepça dhe mbahet tura e parë me udhërrëfyes." data-en="The Visit Trepça pilot project launches and the first guided tour takes place.">Lansohet projekti pilot Visit Trepça dhe mbahet tura e parë me udhërrëfyes.</p></div>
+        <div><b>2026</b><p data-sq="Vizitorë nga Zvicra, Holanda dhe Franca, si dhe shkolla nga Mitrovica." data-en="Visitors from Switzerland, the Netherlands and France, plus schools from Mitrovica.">Vizitorë nga Zvicra, Holanda dhe Franca, si dhe shkolla nga Mitrovica.</p></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="vt-tours" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span>Cool-Tour</div>
+    <h2 class="obs" style="margin-bottom:clamp(20px,3vw,40px)"><span data-sq="Tri mënyra" data-en="Three ways">Tri mënyra</span> <em data-sq="për ta vizituar." data-en="to visit.">për ta vizituar.</em></h2>
+    <div class="cards obs">
+      <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2026/05/051A0140-scaled.jpg" alt=""></div><div class="b"><h3>INside Trepça</h3><p data-sq="Brenda vetë kompleksit. Pusat, zhveshtoret e minatorëve dhe sallat e makinerive." data-en="Into the complex itself. The shafts, the miners' changing rooms and the machine halls.">Brenda vetë kompleksit. Pusat, zhveshtoret e minatorëve dhe sallat e makinerive.</p><div class="meta" data-sq="Me udhërrëfyes · Grupe" data-en="Guided · Groups">Me udhërrëfyes · Grupe</div></div></div>
+      <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_20-1080x675.jpg" alt=""></div><div class="b"><h3>OUTside Trepça</h3><p data-sq="Peizazhi që e ndërtoi miniera. Banesat e punëtorëve, hekurudha dhe lugina përreth." data-en="The landscape the mine built. Workers' housing, rail lines and the valley around it.">Peizazhi që e ndërtoi miniera. Banesat e punëtorëve, hekurudha dhe lugina përreth.</p><div class="meta" data-sq="Në natyrë · Shkolla" data-en="Outdoor · Schools">Në natyrë · Shkolla</div></div></div>
+      <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2026/05/670645249_889272570794928_5219964902527961352_n.jpg" alt=""></div><div class="b"><h3>Purple Tour</h3><p data-sq="Arti, kujtesa dhe vetë minerali, bërë bashkë me artistë që kanë punuar këtu." data-en="Art, memory and the mineral itself, made together with artists who have worked here.">Arti, kujtesa dhe vetë minerali, bërë bashkë me artistë që kanë punuar këtu.</p><div class="meta" data-sq="Art · Kujtesë" data-en="Art · Memory">Art · Kujtesë</div></div></div>
+    </div>
+  </div></section>
+
+  <section id="vt-mem" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Kujtesa e Trepçës" data-en="Memory of Trepça">Kujtesa e Trepçës</span></div>
+    <h2 class="obs" style="margin-bottom:clamp(18px,2.6vw,34px)"><span data-sq="Njerëzit që" data-en="The people who">Njerëzit që</span> <em data-sq="punuan këtu." data-en="worked here.">punuan këtu.</em></h2>
+    <div class="rows obs">
+      <div class="rw"><span class="n">01</span><b data-sq="Intervista me ish-minatorë dhe familjet e tyre" data-en="Interviews with former miners and their families">Intervista me ish-minatorë dhe familjet e tyre</b><i data-sq="Arkiv audio" data-en="Audio archive">Arkiv audio</i></div>
+      <div class="rw"><span class="n">02</span><b data-sq="Harta e kujtesës" data-en="The memory map">Harta e kujtesës</b><i data-sq="Pika që mund t'i ecësh" data-en="Points you can walk">Pika që mund t'i ecësh</i></div>
+      <div class="rw"><span class="n">03</span><b data-sq="Trepça Utopike dhe TrepçArt City" data-en="Utopian Trepça and TrepçArt City">Trepça Utopike dhe TrepçArt City</b><i data-sq="Të ardhme për vendin" data-en="Futures for the site">Të ardhme për vendin</i></div>
+      <div class="rw"><span class="n">04</span><b data-sq="Shtegu i trashëgimisë industriale" data-en="The industrial heritage trail">Shtegu i trashëgimisë industriale</b><i data-sq="Në zhvillim" data-en="In development">Në zhvillim</i></div>
+    </div>
+  </div></section>
+
+  <section id="vt-shop" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Dyqani" data-en="Shop">Dyqani</span></div>
+    <div class="cards obs">
+      <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2023/05/Kujtesa-e-Trepces.jpg" alt=""></div><div class="b"><h3>Kujtesa e Trepçës</h3><p data-sq="Libri me dëshmi, intervista dhe fotografi nga njerëzit që punuan në Trepçë." data-en="The book of testimony, interviews and photographs from the people who worked at Trepça.">Libri me dëshmi, intervista dhe fotografi nga njerëzit që punuan në Trepçë.</p><div class="meta" data-sq="Libër" data-en="Book">Libër</div></div></div>
+      <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2024/06/13-min-scaled.jpg" alt=""></div><div class="b"><h3 data-sq="Suvenire" data-en="Souvenirs">Suvenire</h3><p data-sq="Gota dhe bluza Visit Trepça. Të ardhurat shkojnë për programin." data-en="Visit Trepça mugs and t-shirts. Proceeds go to the programme.">Gota dhe bluza Visit Trepça. Të ardhurat shkojnë për programin.</p><div class="meta" data-sq="Dërgesa në Kosovë" data-en="Shipping in Kosovo">Dërgesa në Kosovë</div></div></div>
+      <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2023/04/11122-1024x678-1.jpg" alt=""></div><div class="b"><h3 data-sq="Publikime" data-en="Publications">Publikime</h3><p data-sq="Hulumtime dhe botime mbi trashëgiminë industriale të rajonit." data-en="Research and publications on the region's industrial heritage.">Hulumtime dhe botime mbi trashëgiminë industriale të rajonit.</p><div class="meta">PDF</div></div></div>
+    </div>
+  </div></section>
+
+  <section id="vt-news" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Lajme nga Trepça" data-en="News from Trepça">Lajme nga Trepça</span></div>
+    <div class="grid3 obs">
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2026/05/051A0140-scaled.jpg" alt=""></div><div class="tag">05.05.2026</div><h4 data-sq="Duke pritur vizitorë nga Zvicra" data-en="Welcoming visitors from Switzerland">Duke pritur vizitorë nga Zvicra</h4></article>
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2026/05/670645249_889272570794928_5219964902527961352_n.jpg" alt=""></div><div class="tag">16.04.2026</div><h4 data-sq="Turë me vizitorë nga Holanda" data-en="A tour with visitors from the Netherlands">Turë me vizitorë nga Holanda</h4></article>
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2024/06/13-min-scaled.jpg" alt=""></div><div class="tag">27.10.2023</div><h4 data-sq="Shkolla 7 Shtatori në Visit Trepça" data-en="7 Shtatori high school at Visit Trepça">Shkolla 7 Shtatori në Visit Trepça</h4></article>
+    </div>
+  </div></section>
+
+  <section id="vt-gal" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Galeria" data-en="Gallery">Galeria</span></div>
+    <div class="gal obs">
+      <div class="gi wide"><img src="https://visittrepca.com/wp-content/uploads/2023/10/Untitled-3-09-scaled.jpg" alt=""></div>
+      <div class="gi"><img src="https://visittrepca.com/wp-content/uploads/2024/06/051A8816-min-scaled.jpg" alt=""></div>
+      <div class="gi"><img src="https://visittrepca.com/wp-content/uploads/2024/06/10-min-scaled.jpg" alt=""></div>
+      <div class="gi"><img src="https://visittrepca.com/wp-content/uploads/2024/06/13-min-scaled.jpg" alt=""></div>
+      <div class="gi"><img src="https://visittrepca.com/wp-content/uploads/2023/08/Untitled-3-01.jpg" alt=""></div>
+      <div class="gi"><img src="https://visittrepca.com/wp-content/uploads/2023/04/Kinema_Tunel-i-Pare-960x590-1.jpg" alt=""></div>
+    </div>
+  </div></section>
+
+  <section id="vt-book" style="padding-top:0"><div class="wrap grid2">
+    <div class="obs">
+      <h3 class="sub" data-sq="Rezervo një turë" data-en="Book a tour">Rezervo një turë</h3>
+      <div class="form">
+        <input data-sq-ph="Emri dhe mbiemri" data-en-ph="Full name" placeholder="Emri dhe mbiemri">
+        <input type="email" placeholder="Email">
+        <input data-sq-ph="Data e preferuar" data-en-ph="Preferred date" placeholder="Data e preferuar">
+        <input data-sq-ph="Numri i personave" data-en-ph="Number of people" placeholder="Numri i personave">
+        <textarea data-sq-ph="Cilën turë doni? INside, OUTside apo Purple Tour?" data-en-ph="Which tour? INside, OUTside or Purple Tour?" placeholder="Cilën turë doni? INside, OUTside apo Purple Tour?"></textarea>
+        <button data-sq="Dërgo kërkesën" data-en="Send request">Dërgo kërkesën</button>
+      </div>
+    </div>
+    <div class="obs">
+      <h3 class="sub" data-sq="Para se të vish" data-en="Before you come">Para se të vish</h3>
+      <div class="rows">
+        <div class="rw"><span class="n">01</span><b data-sq="Rezervimi bëhet paraprakisht" data-en="Booking is made in advance">Rezervimi bëhet paraprakisht</b><i></i></div>
+        <div class="rw"><span class="n">02</span><b data-sq="Vish këpucë të forta dhe xhaketë" data-en="Wear sturdy shoes and a jacket">Vish këpucë të forta dhe xhaketë</b><i></i></div>
+        <div class="rw"><span class="n">03</span><b data-sq="Grupet dhe shkollat rezervojnë veçmas" data-en="Groups and schools book separately">Grupet dhe shkollat rezervojnë veçmas</b><i></i></div>
+        <div class="rw"><span class="n">04</span><b data-sq="Nëntë kilometra nga qendra e Mitrovicës" data-en="Nine kilometres from the centre of Mitrovica">Nëntë kilometra nga qendra e Mitrovicës</b><i></i></div>
+      </div>
+    </div>
+  </div></section>
+</main>
+
+<!-- ==================== MITRORUN MICROSITE ==================== -->
+<main class="page" id="p-mitrorun">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Projekte" data-en="Projects">Projekte</span> <em>/</em> MitroRun</div>
+    <div class="pjhead">
+      <h1><span data-sq="Një qytet." data-en="One city.">Një qytet.</span><br><em data-sq="Tri distanca." data-en="Three distances.">Tri distanca.</em><br><span data-sq="Një ditë." data-en="One day.">Një ditë.</span></h1>
+      <p class="lede" data-sq="Vrapimi i qytetit të Mitrovicës, organizuar nga 7arte dhe Komuna e Mitrovicës. Të gjitha itineraret janë të rrafshëta dhe zhvillohen në hapësirën urbane." data-en="The Mitrovica city run, organised by 7arte and the Municipality of Mitrovica. All routes are flat and take place in the urban space.">Vrapimi i qytetit të Mitrovicës, organizuar nga 7arte dhe Komuna e Mitrovicës. Të gjitha itineraret janë të rrafshëta dhe zhvillohen në hapësirën urbane.</p>
+    </div>
+  </div>
+  <div class="marq"><div>
+    <span class="h">18.10.2026</span><span>◆</span><span>2K SHOTAT</span><span>◆</span><span>5K LUMI</span><span>◆</span><span class="h">10K LIQENI</span><span>◆</span><span>SHESHI ADEM JASHARI</span><span>◆</span><span class="h">ROCK &amp; DJ</span><span>◆</span>
+    <span class="h">18.10.2026</span><span>◆</span><span>2K SHOTAT</span><span>◆</span><span>5K LUMI</span><span>◆</span><span class="h">10K LIQENI</span><span>◆</span><span>SHESHI ADEM JASHARI</span><span>◆</span><span class="h">ROCK &amp; DJ</span><span>◆</span>
+  </div></div></div>
+
+  <section id="mr-races" style="padding-top:clamp(26px,3.6vw,50px)"><div class="wrap">
+    <div class="big3 obs">
+      <div class="b3"><div class="km">10K</div><div class="nm">Liqeni</div><p data-sq="Për vrapues rekreativë dhe garues me përvojë, por e arritshme edhe për ata që e provojnë për herë të parë." data-en="For recreational and experienced runners, but reachable for anyone trying it for the first time.">Për vrapues rekreativë dhe garues me përvojë, por e arritshme edhe për ata që e provojnë për herë të parë.</p><div class="r"><span>11:00</span><span>20 €</span></div></div>
+      <div class="b3"><div class="km">5K</div><div class="nm">Lumi</div><p data-sq="Zgjedhja ideale për fillestarët dhe të gjithë ata që duan ta përjetojnë MitroRun me ritmin e tyre." data-en="The ideal choice for beginners and anyone who wants to experience MitroRun at their own pace.">Zgjedhja ideale për fillestarët dhe të gjithë ata që duan ta përjetojnë MitroRun me ritmin e tyre.</p><div class="r"><span>11:30</span><span>15 €</span></div></div>
+      <div class="b3"><div class="km">2K</div><div class="nm">Shotat</div><p data-sq="E shkurtër, e sigurt dhe plot energji. Mosha e pjesëmarrjes 7 deri 14 vjeç." data-en="Short, safe and full of energy. Participation ages 7 to 14.">E shkurtër, e sigurt dhe plot energji. Mosha e pjesëmarrjes 7 deri 14 vjeç.</p><div class="r"><span>10:00</span><span>5 €</span></div></div>
+    </div>
+    <div class="shot mos" data-cols="16" data-rows="6" style="aspect-ratio:16/6;border-radius:16px;margin-top:clamp(18px,2.6vw,32px)"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_9-1080x675.jpg" alt=""></div>
+  </div></section>
+
+  <section id="mr-prizes" style="padding-top:0"><div class="wrap grid2">
+    <div class="obs">
+      <h3 class="sub" data-sq="Shpërblimet" data-en="Prizes">Shpërblimet</h3>
+      <p class="lede" style="margin-bottom:20px" data-sq="Fondi i çmimeve ndahet mes tri vendeve të para në 10K dhe në 5K, veçmas për femra dhe për meshkuj." data-en="The prize fund is split between the first three places in the 10K and the 5K, separately for women and men.">Fondi i çmimeve ndahet mes tri vendeve të para në 10K dhe në 5K, veçmas për femra dhe për meshkuj.</p>
+      <div class="rows">
+        <div class="rw"><span class="n">10K</span><b data-sq="Vendi i parë" data-en="First place">Vendi i parë</b><i>500 €</i></div>
+        <div class="rw"><span class="n">10K</span><b data-sq="Vendi i dytë" data-en="Second place">Vendi i dytë</b><i>300 €</i></div>
+        <div class="rw"><span class="n">10K</span><b data-sq="Vendi i tretë" data-en="Third place">Vendi i tretë</b><i>200 €</i></div>
+        <div class="rw"><span class="n">5K</span><b data-sq="Vendi i parë" data-en="First place">Vendi i parë</b><i>300 €</i></div>
+        <div class="rw"><span class="n">5K</span><b data-sq="Vendi i dytë" data-en="Second place">Vendi i dytë</b><i>200 €</i></div>
+        <div class="rw"><span class="n">5K</span><b data-sq="Vendi i tretë" data-en="Third place">Vendi i tretë</b><i>100 €</i></div>
+      </div>
+    </div>
+    <div class="obs" id="mr-pack">
+      <h3 class="sub" data-sq="Pakoja e vrapuesit" data-en="The runner's pack">Pakoja e vrapuesit</h3>
+      <div class="rows">
+        <div class="rw"><span class="n">01</span><b data-sq="Numri zyrtar i garuesit" data-en="Official race number">Numri zyrtar i garuesit</b><i></i></div>
+        <div class="rw"><span class="n">02</span><b data-sq="Çipi i matjes së kohës" data-en="Timing chip">Çipi i matjes së kohës</b><i></i></div>
+        <div class="rw"><span class="n">03</span><b data-sq="Fanella zyrtare e MitroRun" data-en="Official MitroRun shirt">Fanella zyrtare e MitroRun</b><i></i></div>
+        <div class="rw"><span class="n">04</span><b data-sq="Udhëzuesi me orarin dhe rregullat" data-en="Guide with schedule and rules">Udhëzuesi me orarin dhe rregullat</b><i></i></div>
+        <div class="rw"><span class="n">05</span><b data-sq="Medalja, uji dhe fotografitë" data-en="Medal, water and photos">Medalja, uji dhe fotografitë</b><i></i></div>
+      </div>
+      <h3 class="sub" style="margin-top:34px" data-sq="Programi" data-en="Programme">Programi</h3>
+      <div class="rows">
+        <div class="rw"><span class="n">01</span><b>Rock Live</b><i data-sq="2 grupe" data-en="2 bands">2 grupe</i></div>
+        <div class="rw"><span class="n">02</span><b>DJ Set</b><i data-sq="2 sete" data-en="2 sets">2 sete</i></div>
+        <div class="rw"><span class="n">03</span><b data-sq="Tregu i prodhuesve" data-en="Producers' market">Tregu i prodhuesve</b><i data-sq="Vendor" data-en="Local">Vendor</i></div>
+        <div class="rw"><span class="n">04</span><b data-sq="Zona familjare" data-en="Family zone">Zona familjare</b><i data-sq="Falas" data-en="Free">Falas</i></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="mr-news" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Zbulo Mitrovicën" data-en="Discover Mitrovica">Zbulo Mitrovicën</span></div>
+    <div class="grid3 obs">
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_9-1080x675.jpg" alt=""></div><div class="tag" data-sq="Ura mbi Ibër" data-en="The bridge over the Ibër">Ura mbi Ibër</div><h4 data-sq="Pika ku qyteti takohet me vetveten" data-en="The point where the city meets itself">Pika ku qyteti takohet me vetveten</h4></article>
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_20-1080x675.jpg" alt=""></div><div class="tag">Trepça</div><h4 data-sq="Trashëgimia që e ndërtoi qytetin" data-en="The heritage that built the city">Trashëgimia që e ndërtoi qytetin</h4></article>
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_24-1080x675.jpg" alt=""></div><div class="tag" data-sq="Bjeshkët e Bajgorës" data-en="The Bajgora mountains">Bjeshkët e Bajgorës</div><h4 data-sq="Njëzet minuta nga vija e finishit" data-en="Twenty minutes from the finish line">Njëzet minuta nga vija e finishit</h4></article>
+    </div>
+  </div></section>
+
+  <section id="mr-gal" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Galeria" data-en="Gallery">Galeria</span></div>
+    <div class="gal obs">
+      <div class="gi wide"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_9-1080x675.jpg" alt=""></div>
+      <div class="gi"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_13-800x533.jpg" alt=""></div>
+      <div class="gi"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_26-800x533.jpg" alt=""></div>
+      <div class="gi"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_22-800x533.jpg" alt=""></div>
+      <div class="gi"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_4-800x497.jpg" alt=""></div>
+      <div class="gi"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_18-800x533.jpg" alt=""></div>
+      <div class="gi"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_7-800x533.jpg" alt=""></div>
+      <div class="gi"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_2-800x533.jpg" alt=""></div>
+      <div class="gi"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_28-800x533.jpg" alt=""></div>
+      <div class="gi"><img src="https://mitro.run/wp-content/uploads/2026/08/MitroRun_16-800x533.jpg" alt=""></div>
+    </div>
+    <div style="margin-top:28px"><a class="sup" href="https://mitro.run" target="_blank">mitro.run →</a></div>
+  </div></section>
+</main>
+
+<!-- ==================== ACADEMY MICROSITE ==================== -->
+<main class="page" id="p-academy">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> 7Arte Academy</div>
+    <div class="pjhead">
+      <h1><span data-sq="Mësoje këtu," data-en="Learn it here,">Mësoje këtu,</span><br><em data-sq="nga ata që e bëjnë." data-en="from people who do it.">nga ata që e bëjnë.</em></h1>
+      <p class="lede" data-sq="Trajnime të shkurtra e praktike për të rinjtë e Mitrovicës, të udhëhequra nga dizajnerë, filmbërës dhe arkitektë që punojnë në fushë." data-en="Short, practical trainings for young people in Mitrovica, led by working designers, filmmakers and architects.">Trajnime të shkurtra e praktike për të rinjtë e Mitrovicës, të udhëhequra nga dizajnerë, filmbërës dhe arkitektë që punojnë në fushë.</p>
+    </div>
+  </div></div>
+  <section id="ac-list" style="padding-top:clamp(24px,3.4vw,46px)"><div class="wrap">
+    <div class="cards obs" style="grid-template-columns:repeat(2,1fr)">
+      <a class="card" href="#/ac-gd"><div class="shot mos" data-cols="10" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2026/03/4b75a2bf-7103-4b6b-928d-5a3c3244875e.jpg" alt=""></div><div class="b"><h3>Graphic Design</h3><p data-sq="Identitet, faqosje dhe tipografi për fillestarë, me shqyrtim portfolioje çdo seancë." data-en="Identity, layout and type for beginners, with portfolio review each session.">Identitet, faqosje dhe tipografi për fillestarë, me shqyrtim portfolioje çdo seancë.</p><div class="meta">Mentor · Yll Haxhiu</div></div></a>
+      <a class="card" href="#/ac-film"><div class="shot mos" data-cols="10" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2026/02/051A9768-scaled.jpg" alt=""></div><div class="b"><h3>Filmmaking</h3><p data-sq="Rrëfimi dokumentar si mjet avokimi, me të rinj nga e gjithë Mitrovica." data-en="Documentary storytelling as a tool for advocacy, with young people from across Mitrovica.">Rrëfimi dokumentar si mjet avokimi, me të rinj nga e gjithë Mitrovica.</p><div class="meta">Mentor · Eroll Bilibani</div></div></a>
+      <a class="card" href="#/ac-3d"><div class="shot mos" data-cols="10" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2026/02/PHOTO-2026-02-23-12-14-08.jpg" alt=""></div><div class="b"><h3>3D Animation</h3><p data-sq="Modelim, animacion dhe rrëfim vizual për këdo që do të punojë në 3D." data-en="Modelling, animation and visual storytelling for anyone who wants to work in 3D.">Modelim, animacion dhe rrëfim vizual për këdo që do të punojë në 3D.</p><div class="meta" data-sq="Edicioni 2026" data-en="2026 edition">Edicioni 2026</div></div></a>
+      <a class="card" href="#/ac-arch"><div class="shot mos" data-cols="10" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2026/01/15-scaled.jpg" alt=""></div><div class="b"><h3 data-sq="Arkitekturë e qëndrueshme" data-en="Sustainable architecture">Arkitekturë e qëndrueshme</h3><p data-sq="Ripërdorim, rinovim dhe çka të bëhet me ndërtesat industriale që ende qëndrojnë." data-en="Reuse, retrofit and what to do with industrial buildings that are still standing.">Ripërdorim, rinovim dhe çka të bëhet me ndërtesat industriale që ende qëndrojnë.</p><div class="meta" data-sq="Me UBT dhe UP" data-en="With UBT and UP">Me UBT dhe UP</div></div></a>
+    </div>
+  </div></section>
+  <section id="ac-how" style="padding-top:0"><div class="wrap grid2">
+    <div class="obs"><h3 class="sub" data-sq="Si funksionon" data-en="How it works">Si funksionon</h3><div class="rows">
+      <div class="rw"><span class="n">01</span><b data-sq="Hapet thirrja publike" data-en="The open call is published">Hapet thirrja publike</b><i></i></div>
+      <div class="rw"><span class="n">02</span><b data-sq="Aplikon online, pa pagesë" data-en="You apply online, free of charge">Aplikon online, pa pagesë</b><i></i></div>
+      <div class="rw"><span class="n">03</span><b data-sq="Përzgjidhen pjesëmarrësit" data-en="Participants are selected">Përzgjidhen pjesëmarrësit</b><i></i></div>
+      <div class="rw"><span class="n">04</span><b data-sq="Trajnimi mbahet në hapësirat e 7Arte" data-en="The training takes place at 7Arte">Trajnimi mbahet në hapësirat e 7Arte</b><i></i></div>
+      <div class="rw"><span class="n">05</span><b data-sq="Certifikatë dhe punë në portfolio" data-en="Certificate and portfolio work">Certifikatë dhe punë në portfolio</b><i></i></div>
+    </div></div>
+    <div class="obs" id="ac-apply"><h3 class="sub" data-sq="Apliko" data-en="Apply">Apliko</h3><div class="form">
+      <input data-sq-ph="Emri dhe mbiemri" data-en-ph="Full name" placeholder="Emri dhe mbiemri">
+      <input type="email" placeholder="Email"><input data-sq-ph="Cili trajnim?" data-en-ph="Which training?" placeholder="Cili trajnim?">
+      <textarea data-sq-ph="Pse do të marrësh pjesë?" data-en-ph="Why do you want to take part?" placeholder="Pse do të marrësh pjesë?"></textarea>
+      <button data-sq="Dërgo aplikimin" data-en="Send application">Dërgo aplikimin</button>
+    </div></div>
+  </div></section>
+  <section id="ac-news" style="padding-top:0"><div class="wrap">
+    <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Lajme nga Academy" data-en="Academy news">Lajme nga Academy</span></div>
+    <div class="grid3 obs">
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2026/03/4b75a2bf-7103-4b6b-928d-5a3c3244875e.jpg" alt=""></div><div class="tag">02.03.2026</div><h4 data-sq="Hapet thirrja për trajnim në Graphic Design" data-en="Open call for Graphic Design training">Hapet thirrja për trajnim në Graphic Design</h4></article>
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2026/02/PHOTO-2026-02-23-12-14-08.jpg" alt=""></div><div class="tag">23.02.2026</div><h4 data-sq="7Arte Academy sjell trajnim në 3D animacion" data-en="7Arte Academy brings 3D animation training">7Arte Academy sjell trajnim në 3D animacion</h4></article>
+      <article class="nx"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2026/02/051A9768-scaled.jpg" alt=""></div><div class="tag">10.02.2026</div><h4 data-sq="Filmmaking for Advocacy si hapësirë për dialog" data-en="Filmmaking for Advocacy as a space for dialogue">Filmmaking for Advocacy si hapësirë për dialog</h4></article>
+    </div>
+  </div></section>
+</main>
+
+<!-- ==================== remaining 7arte pages ==================== -->
+<main class="page" id="p-about">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Rreth nesh" data-en="About us">Rreth nesh</span></div>
+    <h1><span data-sq="Themeluar nga" data-en="Founded by">Themeluar nga</span><br><em data-sq="artistë që mbetën." data-en="artists who stayed.">artistë që mbetën.</em></h1>
+    <p class="lede" style="margin-top:26px" data-sq="Duke parë nevojën për zhvillim kulturor dhe aktivizim të të rinjve, më 2 maj të vitit 2006, me iniciativën e artistëve vendorë u themelua organizata kulturore 7arte." data-en="Seeing the need for cultural development and for young people to be active, on 2 May 2006 local artists founded the cultural organisation 7arte.">Duke parë nevojën për zhvillim kulturor dhe aktivizim të të rinjve, më 2 maj të vitit 2006, me iniciativën e artistëve vendorë u themelua organizata kulturore 7arte.</p>
+  </div></div>
+  <section style="padding-top:clamp(20px,3vw,40px)"><div class="wrap">
+    <div class="shot mos" data-cols="16" data-rows="6" style="aspect-ratio:16/6;border-radius:16px;margin-bottom:clamp(30px,4.5vw,62px)"><img src="https://www.7-arte.org/wp-content/uploads/2021/12/terasa.png" alt=""></div>
+    <div class="cards">
+      <a class="card" href="#/history"><div class="b"><h3 data-sq="Historia" data-en="History">Historia</h3><p data-sq="Prej 2006 deri sot, njëzet vjet punë kulturore në një qytet të ndarë." data-en="From 2006 to today, twenty years of cultural work in a divided city.">Prej 2006 deri sot, njëzet vjet punë kulturore në një qytet të ndarë.</p><div class="meta">→</div></div></a>
+      <a class="card" href="#/staff"><div class="b"><h3 data-sq="Stafi" data-en="Staff">Stafi</h3><p data-sq="Nëntë njerëz që e mbajnë organizatën, festivalin, turat dhe akademinë." data-en="Nine people who keep the organisation, festival, tours and academy running.">Nëntë njerëz që e mbajnë organizatën, festivalin, turat dhe akademinë.</p><div class="meta">→</div></div></a>
+      <a class="card" href="#/info"><div class="b"><h3 data-sq="Informata" data-en="Information">Informata</h3><p data-sq="Statuti, qeverisja, transparenca dhe të dhënat e regjistrimit." data-en="Statute, governance, transparency and registration details.">Statuti, qeverisja, transparenca dhe të dhënat e regjistrimit.</p><div class="meta">→</div></div></a>
+    </div>
+  </div></section>
+</main>
+
+<main class="page" id="p-history">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Rreth nesh" data-en="About us">Rreth nesh</span> <em>/</em> <span data-sq="Historia" data-en="History">Historia</span></div>
+    <h1><span data-sq="Njëzet vjet," data-en="Twenty years,">Njëzet vjet,</span> <em data-sq="një qytet." data-en="one city.">një qytet.</em></h1>
+  </div></div>
+  <section style="padding-top:clamp(20px,3vw,40px)"><div class="wrap grid2">
+    <div class="obs tl">
+      <div><b>2006</b><p data-sq="Themelohet 7arte më 2 maj, me iniciativën e artistëve vendorë të Mitrovicës." data-en="7arte is founded on 2 May, on the initiative of local artists in Mitrovica.">Themelohet 7arte më 2 maj, me iniciativën e artistëve vendorë të Mitrovicës.</p></div>
+      <div><b>2022</b><p data-sq="7Arte anëtarësohet në Trans Europe Halles dhe nis punën për hapësirat industriale të Mitrovicës." data-en="7Arte joins Trans Europe Halles and starts work on Mitrovica's industrial spaces.">7Arte anëtarësohet në Trans Europe Halles dhe nis punën për hapësirat industriale të Mitrovicës.</p></div>
+      <div><b>2023</b><p data-sq="Lansohet projekti pilot Visit Trepça dhe mbahen turat e para me udhërrëfyes." data-en="The Visit Trepça pilot project launches and the first guided tours take place.">Lansohet projekti pilot Visit Trepça dhe mbahen turat e para me udhërrëfyes.</p></div>
+      <div><b>2026</b><p data-sq="20-vjetori. Marrëveshje me Komunën për mjedisin, kapitull i ri me Trepçën dhe edicioni i 16-të i Green Fest." data-en="The 20th anniversary. An environmental agreement with the Municipality, a new chapter with Trepça and the 16th Green Fest.">20-vjetori. Marrëveshje me Komunën për mjedisin, kapitull i ri me Trepçën dhe edicioni i 16-të i Green Fest.</p></div>
+    </div>
+    <div class="obs"><div class="shot mos" data-cols="10" data-rows="10" style="aspect-ratio:3/4;border-radius:16px"><img src="https://www.7-arte.org/wp-content/uploads/2026/05/694663324_1423858059771620_644636740689303126_n.jpg" alt=""></div></div>
+  </div></section>
+</main>
+
+<main class="page" id="p-staff">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Rreth nesh" data-en="About us">Rreth nesh</span> <em>/</em> <span data-sq="Stafi" data-en="Staff">Stafi</span></div>
+    <h1><span data-sq="Nëntë" data-en="Nine">Nëntë</span> <em data-sq="njerëz." data-en="people.">njerëz.</em></h1>
+  </div></div>
+  <section style="padding-top:clamp(20px,3vw,40px)"><div class="wrap"><div class="people obs">
+    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/051A2289-scaled.jpg" alt=""></div><b>Lulzim</b><span data-sq="Drejtor ekzekutiv" data-en="Executive director">Drejtor ekzekutiv</span><a href="mailto:lulzimhoti@7-arte.org">lulzimhoti@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-28-at-10.08.07.jpeg" alt=""></div><b>Rinor</b><span data-sq="Menaxher programi" data-en="Program manager">Menaxher programi</span><a href="mailto:rinor@7-arte.org">rinor@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/051A2236-scaled.jpg" alt=""></div><b>Ardiana</b><span data-sq="Financa dhe HR" data-en="Finance and HR">Financa dhe HR</span><a href="mailto:financa@7-arte.org">financa@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/051A9476-scaled.jpg" alt=""></div><b>Diellza</b><span data-sq="Koordinatore programi" data-en="Program coordinator">Koordinatore programi</span><a href="mailto:diellza@7-arte.org">diellza@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/051A2260-scaled.jpg" alt=""></div><b>Gzim</b><span data-sq="M&E dhe operacione" data-en="M&E and operations">M&amp;E dhe operacione</span><a href="mailto:gzim@7-arte.org">gzim@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/Kusha-1.jpg" alt=""></div><b>Kushtrim</b><span data-sq="Menaxher produksioni" data-en="Production manager">Menaxher produksioni</span><a href="mailto:kushtrim@7-arte.org">kushtrim@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-16-at-14.02.58-1copy-1.jpeg" alt=""></div><b>Yll</b><span data-sq="Dizajner grafik" data-en="Graphic designer">Dizajner grafik</span><a href="#/ac-gd" data-sq="Mentor në Academy" data-en="Academy mentor">Mentor në Academy</a></div>
+    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-27-at-15.29.48.jpeg" alt=""></div><b>Alketa</b><span data-sq="Zyrtare e programit mjedisor" data-en="Environmental program officer">Zyrtare e programit mjedisor</span><a href="mailto:alketa@7-arte.org">alketa@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/051A9105-scaled.jpg" alt=""></div><b>Christian</b><span data-sq="Vullnetar i Peace Corps" data-en="Peace Corps volunteer">Vullnetar i Peace Corps</span><a href="mailto:christian@7-arte.org">christian@7-arte.org</a></div>
+  </div></div></section>
+</main>
+
+<main class="page" id="p-info">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Rreth nesh" data-en="About us">Rreth nesh</span> <em>/</em> <span data-sq="Informata" data-en="Information">Informata</span></div>
+    <h1><span data-sq="Si" data-en="How we">Si</span> <em data-sq="funksionojmë." data-en="operate.">funksionojmë.</em></h1>
+  </div></div>
+  <section style="padding-top:clamp(20px,3vw,40px)"><div class="wrap grid2">
+    <div class="obs"><h3 class="sub" data-sq="Të dhënat" data-en="Details">Të dhënat</h3><div class="rows">
+      <div class="rw"><span class="n">01</span><b data-sq="Emri i plotë" data-en="Full name">Emri i plotë</b><i>OJQ 7 ARTE</i></div>
+      <div class="rw"><span class="n">02</span><b data-sq="Statusi" data-en="Status">Statusi</b><i data-sq="Organizatë joqeveritare" data-en="Non-governmental organisation">Organizatë joqeveritare</i></div>
+      <div class="rw"><span class="n">03</span><b data-sq="Themeluar" data-en="Founded">Themeluar</b><i>02.05.2006</i></div>
+      <div class="rw"><span class="n">04</span><b data-sq="Selia" data-en="Registered office">Selia</b><i>Mitrovicë, Kosovë</i></div>
+      <div class="rw"><span class="n">05</span><b data-sq="Anëtarësime" data-en="Memberships">Anëtarësime</b><i>Trans Europe Halles</i></div>
+    </div></div>
+    <div class="obs"><h3 class="sub" data-sq="Transparenca" data-en="Transparency">Transparenca</h3><div class="rows">
+      <div class="rw"><span class="n">01</span><b data-sq="Raporti vjetor 2024" data-en="Annual report 2024">Raporti vjetor 2024</b><i>PDF</i></div>
+      <div class="rw"><span class="n">02</span><b data-sq="Raportet e projekteve" data-en="Project reports">Raportet e projekteve</b><i data-sq="Arkiv" data-en="Archive">Arkiv</i></div>
+      <div class="rw"><span class="n">03</span><b data-sq="Statuti i organizatës" data-en="Statute">Statuti i organizatës</b><i>PDF</i></div>
+      <div class="rw"><span class="n">04</span><b data-sq="Politika e privatësisë" data-en="Privacy policy">Politika e privatësisë</b><i>→</i></div>
+      <div class="rw"><span class="n">05</span><b data-sq="Politika e cookies" data-en="Cookie policy">Politika e cookies</b><i>→</i></div>
+    </div></div>
+  </div></section>
+</main>
+
+<main class="page" id="p-contact">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Kontakt" data-en="Contact">Kontakt</span></div>
+    <h1><span data-sq="Na" data-en="Get in">Na</span> <em data-sq="shkruaj." data-en="touch.">shkruaj.</em></h1>
+  </div></div>
+  <section style="padding-top:clamp(20px,3vw,40px)"><div class="wrap grid2">
+    <div class="obs"><h3 class="sub" data-sq="Dërgo një mesazh" data-en="Send a message">Dërgo një mesazh</h3><div class="form">
+      <input data-sq-ph="Emri" data-en-ph="Name" placeholder="Emri"><input type="email" placeholder="Email">
+      <input data-sq-ph="Subjekti" data-en-ph="Subject" placeholder="Subjekti">
+      <textarea data-sq-ph="Mesazhi" data-en-ph="Message" placeholder="Mesazhi"></textarea>
+      <button data-sq="Dërgo" data-en="Send">Dërgo</button>
+      <p class="note" data-sq="Formulari është vetëm pamje në këtë koncept." data-en="This form is a mockup in this concept.">Formulari është vetëm pamje në këtë koncept.</p>
+    </div></div>
+    <div class="obs"><h3 class="sub" data-sq="Ku jemi" data-en="Where we are">Ku jemi</h3><div class="rows">
+      <div class="rw"><span class="n">01</span><b>Mitrovicë, Kosovë</b><i data-sq="Zyra" data-en="Office">Zyra</i></div>
+      <div class="rw"><span class="n">02</span><b>+383 38 748 861</b><i>Tel</i></div>
+      <div class="rw"><span class="n">03</span><b>info@7-arte.org</b><i>Email</i></div>
+      <div class="rw"><span class="n">04</span><b>facebook.com/shtatearte</b><i>Facebook</i></div>
+      <div class="rw"><span class="n">05</span><b>@7arte_cc</b><i>Instagram</i></div>
+    </div>
+    <div class="shot mos" data-cols="10" data-rows="6" style="aspect-ratio:16/10;border-radius:14px;margin-top:24px"><img src="https://www.7-arte.org/wp-content/uploads/2021/12/terasa.png" alt=""></div></div>
+  </div></section>
+</main>
+
+<main class="page" id="p-news">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Lajme" data-en="News">Lajme</span></div>
+    <h1><span data-sq="Një rrjedhë," data-en="One feed,">Një rrjedhë,</span> <em data-sq="çdo projekt." data-en="every project.">çdo projekt.</em></h1>
+  </div></div>
+  <section style="padding-top:clamp(16px,2.4vw,32px)"><div class="wrap">
+    <div class="filters" id="nf">
+      <button class="on" data-f="all" data-sq="Të gjitha" data-en="All">Të gjitha</button>
+      <button data-f="7arte">7 Arte</button><button data-f="gf">Green Fest</button>
+      <button data-f="vt">Visit Trepça</button><button data-f="ac">Academy</button>
+    </div>
+    <div class="nlist obs" id="nn">
+      <div class="ni" data-k="gf"><div class="dbox"><b>03</b><span>Sht</span></div><div class="th shot"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/09/StageGF16.jpg" alt=""></div><div class="tx"><b data-sq="Green Fest 16 mbyllet pas pesë ditësh" data-en="Green Fest 16 closes after five days">Green Fest 16 mbyllet pas pesë ditësh</b><span>Green Fest · 2026</span></div></div>
+      <div class="ni" data-k="gf"><div class="dbox"><b>10</b><span>Kor</span></div><div class="th shot"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-10-at-1.39.35-PM.jpeg" alt=""></div><div class="tx"><b data-sq="REFLEKTO shpallet tema e edicionit të 16-të" data-en="REFLEKTO announced as the theme of the 16th edition">REFLEKTO shpallet tema e edicionit të 16-të</b><span>Green Fest · 2026</span></div></div>
+      <div class="ni" data-k="gf"><div class="dbox"><b>25</b><span>Maj</span></div><div class="th shot"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/05/a32b468e-8d01-4516-8ea7-79352ee58ad1.jpg" alt=""></div><div class="tx"><b data-sq="Thirrje për vullnetarë për edicionin e 16-të" data-en="Call for volunteers for the 16th edition">Thirrje për vullnetarë për edicionin e 16-të</b><span>Green Fest · 2026</span></div></div>
+      <div class="ni" data-k="7arte"><div class="dbox"><b>09</b><span>Maj</span></div><div class="th shot"><img src="https://www.7-arte.org/wp-content/uploads/2026/05/694663324_1423858059771620_644636740689303126_n.jpg" alt=""></div><div class="tx"><b data-sq="20-vjetori dhe kapitull i ri me Trepçën" data-en="Twenty years and a new chapter with Trepça">20-vjetori dhe kapitull i ri me Trepçën</b><span>7 Arte · 2026</span></div></div>
+      <div class="ni" data-k="vt"><div class="dbox"><b>05</b><span>Maj</span></div><div class="th shot"><img src="https://visittrepca.com/wp-content/uploads/2026/05/051A0140-scaled.jpg" alt=""></div><div class="tx"><b data-sq="Duke pritur vizitorë nga Zvicra" data-en="Welcoming visitors from Switzerland">Duke pritur vizitorë nga Zvicra</b><span>Visit Trepça · 2026</span></div></div>
+      <div class="ni" data-k="7arte"><div class="dbox"><b>23</b><span>Prill</span></div><div class="th shot"><img src="https://www.7-arte.org/wp-content/uploads/2026/05/675535575_1377719694392187_1062833328333950538_n-1.jpg" alt=""></div><div class="tx"><b data-sq="7 Arte pjesë e Konferencës #101 të Trans Europe Halles në Marsejë" data-en="7 Arte at the Trans Europe Halles conference in Marseille">7 Arte pjesë e Konferencës #101 të Trans Europe Halles në Marsejë</b><span>7 Arte · 2026</span></div></div>
+      <div class="ni" data-k="7arte"><div class="dbox"><b>22</b><span>Prill</span></div><div class="th shot"><img src="https://www.7-arte.org/wp-content/uploads/2026/05/20260421_153006-scaled.jpg" alt=""></div><div class="tx"><b data-sq="Marrëveshje me Komunën për mbrojtjen e mjedisit" data-en="Agreement with the Municipality on environmental protection">Marrëveshje me Komunën për mbrojtjen e mjedisit</b><span>7 Arte · 2026</span></div></div>
+      <div class="ni" data-k="vt"><div class="dbox"><b>16</b><span>Prill</span></div><div class="th shot"><img src="https://visittrepca.com/wp-content/uploads/2026/05/670645249_889272570794928_5219964902527961352_n.jpg" alt=""></div><div class="tx"><b data-sq="Turë me vizitorë nga Holanda" data-en="A tour with visitors from the Netherlands">Turë me vizitorë nga Holanda</b><span>Visit Trepça · 2026</span></div></div>
+      <div class="ni" data-k="ac"><div class="dbox"><b>02</b><span>Mars</span></div><div class="th shot"><img src="https://www.7-arte.org/wp-content/uploads/2026/03/4b75a2bf-7103-4b6b-928d-5a3c3244875e.jpg" alt=""></div><div class="tx"><b data-sq="Thirrje për trajnim në Graphic Design" data-en="Open call for Graphic Design training">Thirrje për trajnim në Graphic Design</b><span>Academy · 2026</span></div></div>
+      <div class="ni" data-k="ac"><div class="dbox"><b>23</b><span>Shk</span></div><div class="th shot"><img src="https://www.7-arte.org/wp-content/uploads/2026/02/PHOTO-2026-02-23-12-14-08.jpg" alt=""></div><div class="tx"><b data-sq="7Arte Academy sjell trajnim në 3D animacion" data-en="7Arte Academy brings 3D animation training">7Arte Academy sjell trajnim në 3D animacion</b><span>Academy · 2026</span></div></div>
+      <div class="ni" data-k="ac"><div class="dbox"><b>10</b><span>Shk</span></div><div class="th shot"><img src="https://www.7-arte.org/wp-content/uploads/2026/02/051A9768-scaled.jpg" alt=""></div><div class="tx"><b data-sq="Filmmaking for Advocacy si hapësirë për dialog" data-en="Filmmaking for Advocacy as a space for dialogue">Filmmaking for Advocacy si hapësirë për dialog</b><span>Academy · 2026</span></div></div>
+      <div class="ni" data-k="7arte"><div class="dbox"><b>26</b><span>Jan</span></div><div class="th shot"><img src="https://www.7-arte.org/wp-content/uploads/2026/01/15-scaled.jpg" alt=""></div><div class="tx"><b data-sq="Ekspozitë pop-up nga studentët e UBT-së" data-en="Pop-up exhibition by UBT students">Ekspozitë pop-up nga studentët e UBT-së</b><span>7 Arte · 2026</span></div></div>
+    </div>
+  </div></section>
+</main>
+
+<main class="page" id="p-culture">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Projekte" data-en="Projects">Projekte</span> <em>/</em> <span data-sq="Sfidat e zhvillimit kulturor" data-en="Cultural development challenges">Sfidat e zhvillimit kulturor</span></div>
+    <h1><span data-sq="Sfidat e" data-en="The challenges of">Sfidat e</span> <em data-sq="zhvillimit kulturor." data-en="cultural development.">zhvillimit kulturor.</em></h1>
+    <p class="lede" style="margin-top:24px" data-sq="Program hulumtimi dhe avokimi për zhvillimin kulturor në Mitrovicë dhe për hapat e mëtutjeshëm." data-en="A research and advocacy programme on cultural development in Mitrovica and the next steps.">Program hulumtimi dhe avokimi për zhvillimin kulturor në Mitrovicë dhe për hapat e mëtutjeshëm.</p>
+  </div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap grid2">
+    <div class="obs"><h3 class="sub" data-sq="Çka përfshin" data-en="What it covers">Çka përfshin</h3><div class="rows">
+      <div class="rw"><span class="n">01</span><b data-sq="Hulumtim mbi infrastrukturën kulturore" data-en="Research on cultural infrastructure">Hulumtim mbi infrastrukturën kulturore</b><i>PDF</i></div>
+      <div class="rw"><span class="n">02</span><b data-sq="Revitalizimi i qendrës kulturore në Tunelin e Parë" data-en="Revitalisation of the cultural centre in Tuneli i Parë">Revitalizimi i qendrës kulturore në Tunelin e Parë</b><i>2022</i></div>
+      <div class="rw"><span class="n">03</span><b data-sq="Vizionimi i hapësirave industriale në Mitrovicë" data-en="Visioning of industrial spaces in Mitrovica">Vizionimi i hapësirave industriale në Mitrovicë</b><i>2022</i></div>
+      <div class="rw"><span class="n">04</span><b data-sq="Memorandum me Fakultetin e Arkitekturës, UP" data-en="Memorandum with the Faculty of Architecture, UP">Memorandum me Fakultetin e Arkitekturës, UP</b><i>2022</i></div>
+      <div class="rw"><span class="n">05</span><b data-sq="Rinia për trashëgimi kulturore" data-en="Youth for cultural heritage">Rinia për trashëgimi kulturore</b><i>2022</i></div>
+    </div></div>
+    <div class="obs"><div class="shot mos" data-cols="10" data-rows="8" style="aspect-ratio:4/3;border-radius:16px"><img src="https://visittrepca.com/wp-content/uploads/2023/04/foto1-1024x590-1.jpg" alt=""></div></div>
+  </div></section>
+</main>
+
+<main class="page" id="p-past">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Projekte" data-en="Projects">Projekte</span> <em>/</em> <span data-sq="Arkivi" data-en="Archive">Arkivi</span></div>
+    <h1><span data-sq="Çka kemi" data-en="What we have">Çka kemi</span> <em data-sq="bërë më parë." data-en="done before.">bërë më parë.</em></h1>
+  </div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap"><div class="cards obs">
+    <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2026/01/15-scaled.jpg" alt=""></div><div class="b"><h3>Gjuj' ART</h3><p data-sq="Program i mëparshëm për artistë të rinj dhe punë krijuese në hapësirën publike." data-en="An earlier programme for young artists and creative work in public space.">Program i mëparshëm për artistë të rinj dhe punë krijuese në hapësirën publike.</p><div class="meta" data-sq="Arkiv" data-en="Archive">Arkiv</div></div></div>
+    <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2023/04/11122-1024x678-1.jpg" alt=""></div><div class="b"><h3>Creative Corner</h3><p data-sq="Hapësirë krijuese për të rinjtë e Mitrovicës, me punëtori dhe takime javore." data-en="A creative space for young people in Mitrovica, with workshops and weekly meetings.">Hapësirë krijuese për të rinjtë e Mitrovicës, me punëtori dhe takime javore.</p><div class="meta" data-sq="Arkiv" data-en="Archive">Arkiv</div></div></div>
+    <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2023/04/Kinema_Tunel-i-Pare-960x590-1.jpg" alt=""></div><div class="b"><h3 data-sq="Kinemaja e Hapur Green" data-en="Open Air Cinema Green">Kinemaja e Hapur Green</h3><p data-sq="Shtatë edicione projeksionesh nën qiell të hapur, në hapësira publike të qytetit." data-en="Seven editions of open air screenings in public spaces around the city.">Shtatë edicione projeksionesh nën qiell të hapur, në hapësira publike të qytetit.</p><div class="meta" data-sq="7 edicione" data-en="7 editions">7 edicione</div></div></div>
+  </div></div></section>
+</main>
+
+<main class="page" id="p-ac-gd">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> Academy <em>/</em> Graphic Design</div>
+    <h1>Graphic <em>Design.</em></h1>
+    <p class="lede" style="margin-top:24px" data-sq="Trajnim praktik në dizajn grafik me dizajnerin Yll Haxhiu, i bazuar në punë reale dhe shqyrtim portfolioje." data-en="Practical graphic design training with designer Yll Haxhiu, based on real work and portfolio review.">Trajnim praktik në dizajn grafik me dizajnerin Yll Haxhiu, i bazuar në punë reale dhe shqyrtim portfolioje.</p>
+  </div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap grid2">
+    <div class="obs"><h3 class="sub" data-sq="Programi" data-en="Curriculum">Programi</h3><div class="rows">
+      <div class="rw"><span class="n">01</span><b data-sq="Bazat e tipografisë" data-en="Typography basics">Bazat e tipografisë</b><i></i></div>
+      <div class="rw"><span class="n">02</span><b data-sq="Rrjeti dhe faqosja" data-en="Grid and layout">Rrjeti dhe faqosja</b><i></i></div>
+      <div class="rw"><span class="n">03</span><b data-sq="Identiteti vizual" data-en="Visual identity">Identiteti vizual</b><i></i></div>
+      <div class="rw"><span class="n">04</span><b data-sq="Përgatitja për shtyp" data-en="Print preparation">Përgatitja për shtyp</b><i></i></div>
+      <div class="rw"><span class="n">05</span><b data-sq="Portfolio dhe prezantim" data-en="Portfolio and presentation">Portfolio dhe prezantim</b><i></i></div>
+    </div></div>
+    <div class="obs"><h3 class="sub" data-sq="Apliko" data-en="Apply">Apliko</h3><div class="form">
+      <input data-sq-ph="Emri dhe mbiemri" data-en-ph="Full name" placeholder="Emri dhe mbiemri">
+      <input type="email" placeholder="Email"><input data-sq-ph="Telefon" data-en-ph="Phone" placeholder="Telefon">
+      <textarea data-sq-ph="Pse do të marrësh pjesë?" data-en-ph="Why do you want to take part?" placeholder="Pse do të marrësh pjesë?"></textarea>
+      <button data-sq="Dërgo aplikimin" data-en="Send application">Dërgo aplikimin</button>
+    </div></div>
+  </div></section>
+</main>
+
+<main class="page" id="p-ac-film">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> Academy <em>/</em> Filmmaking</div>
+    <h1>Filmmaking <em>for Advocacy.</em></h1>
+    <p class="lede" style="margin-top:24px" data-sq="Trajnim nën mentorimin e Eroll Bilibanit, që mbledh të rinj dhe të reja nga Mitrovica, duke e përdorur filmin dokumentar si hapësirë për dialog dhe bashkëpunim." data-en="Training mentored by Eroll Bilibani, bringing together young people from Mitrovica and using documentary film as a space for dialogue and cooperation.">Trajnim nën mentorimin e Eroll Bilibanit, që mbledh të rinj dhe të reja nga Mitrovica, duke e përdorur filmin dokumentar si hapësirë për dialog dhe bashkëpunim.</p>
+  </div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap">
+    <div class="shot mos" data-cols="14" data-rows="6" style="aspect-ratio:16/7;border-radius:16px"><img src="https://www.7-arte.org/wp-content/uploads/2026/02/051A9768-scaled.jpg" alt=""></div>
+    <div class="grid2 obs" style="margin-top:clamp(26px,3.6vw,50px)">
+      <div><h3 class="sub" data-sq="Çka mësohet" data-en="What you learn">Çka mësohet</h3><div class="rows">
+        <div class="rw"><span class="n">01</span><b data-sq="Zhvillimi i idesë dhe hulumtimi" data-en="Idea development and research">Zhvillimi i idesë dhe hulumtimi</b><i></i></div>
+        <div class="rw"><span class="n">02</span><b data-sq="Intervista dhe puna me njerëz" data-en="Interviews and working with people">Intervista dhe puna me njerëz</b><i></i></div>
+        <div class="rw"><span class="n">03</span><b data-sq="Xhirimi dhe zëri" data-en="Shooting and sound">Xhirimi dhe zëri</b><i></i></div>
+        <div class="rw"><span class="n">04</span><b data-sq="Montazhi dhe struktura" data-en="Editing and structure">Montazhi dhe struktura</b><i></i></div>
+      </div></div>
+      <div><h3 class="sub" data-sq="Statusi" data-en="Status">Statusi</h3><div class="rows">
+        <div class="rw"><span class="n">01</span><b data-sq="Edicioni 2026" data-en="2026 edition">Edicioni 2026</b><i data-sq="Përfunduar" data-en="Completed">Përfunduar</i></div>
+        <div class="rw"><span class="n">02</span><b data-sq="Edicioni i ardhshëm" data-en="Next edition">Edicioni i ardhshëm</b><i data-sq="Së shpejti" data-en="Coming soon">Së shpejti</i></div>
+      </div></div>
+    </div>
+  </div></section>
+</main>
+
+<main class="page" id="p-ac-3d">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> Academy <em>/</em> 3D Animation</div>
+    <h1>3D <em>Animation.</em></h1>
+    <p class="lede" style="margin-top:24px" data-sq="7Arte Academy ofron mundësi të veçantë për të gjithë ata që duan të eksplorojnë botën e animacionit 3D, modelimit dhe tregimit vizual përmes teknologjisë." data-en="7Arte Academy offers a special opportunity for anyone who wants to explore the world of 3D animation, modelling and visual storytelling through technology.">7Arte Academy ofron mundësi të veçantë për të gjithë ata që duan të eksplorojnë botën e animacionit 3D, modelimit dhe tregimit vizual përmes teknologjisë.</p>
+  </div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap"><div class="shot mos" data-cols="14" data-rows="6" style="aspect-ratio:16/7;border-radius:16px"><img src="https://www.7-arte.org/wp-content/uploads/2026/02/PHOTO-2026-02-23-12-14-08.jpg" alt=""></div></div></section>
+</main>
+
+<main class="page" id="p-ac-arch">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> Academy <em>/</em> <span data-sq="Arkitekturë e qëndrueshme" data-en="Sustainable architecture">Arkitekturë e qëndrueshme</span></div>
+    <h1><span data-sq="Arkitekturë" data-en="Sustainable">Arkitekturë</span> <em data-sq="e qëndrueshme." data-en="architecture.">e qëndrueshme.</em></h1>
+    <p class="lede" style="margin-top:24px" data-sq="Ripërdorimi i ndërtesave industriale dhe e ardhmja e hapësirave të braktisura në Mitrovicë, në bashkëpunim me UBT dhe Fakultetin e Arkitekturës të Universitetit të Prishtinës." data-en="Reuse of industrial buildings and the future of abandoned spaces in Mitrovica, with UBT and the Faculty of Architecture at the University of Prishtina.">Ripërdorimi i ndërtesave industriale dhe e ardhmja e hapësirave të braktisura në Mitrovicë, në bashkëpunim me UBT dhe Fakultetin e Arkitekturës të Universitetit të Prishtinës.</p>
+  </div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap"><div class="shot mos" data-cols="14" data-rows="6" style="aspect-ratio:16/7;border-radius:16px"><img src="https://www.7-arte.org/wp-content/uploads/2026/01/15-scaled.jpg" alt=""></div></div></section>
+</main>
+
+<main class="page" id="p-publications">
+  <div class="phero"><div class="wrap">
+    <div class="crumb">7 arte <em>/</em> <span data-sq="Publikime" data-en="Publications">Publikime</span></div>
+    <h1><span data-sq="Çka kemi" data-en="What we have">Çka kemi</span> <em data-sq="publikuar." data-en="published.">publikuar.</em></h1>
+  </div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap"><div class="cards obs">
+    <a class="card" href="#/reports-annual"><div class="b"><h3 data-sq="Raporte vjetore" data-en="Annual reports">Raporte vjetore</h3><p data-sq="Raportimi vjetor i aktiviteteve, financave dhe rezultateve të organizatës." data-en="Annual reporting on activities, finances and results.">Raportimi vjetor i aktiviteteve, financave dhe rezultateve të organizatës.</p><div class="meta">→</div></div></a>
+    <a class="card" href="#/reports-project"><div class="b"><h3 data-sq="Raporte projektesh" data-en="Project reports">Raporte projektesh</h3><p data-sq="Raporte për projekte të veçanta, për donatorë dhe për publikun." data-en="Reports on individual projects, for donors and for the public.">Raporte për projekte të veçanta, për donatorë dhe për publikun.</p><div class="meta">→</div></div></a>
+    <a class="card" href="#/research"><div class="b"><h3 data-sq="Hulumtime" data-en="Research">Hulumtime</h3><p data-sq="Hulumtime mbi kulturën, mjedisin dhe trashëgiminë industriale të rajonit." data-en="Research on culture, environment and industrial heritage.">Hulumtime mbi kulturën, mjedisin dhe trashëgiminë industriale të rajonit.</p><div class="meta">→</div></div></a>
+  </div></div></section>
+</main>
+
+<main class="page" id="p-reports-annual">
+  <div class="phero"><div class="wrap"><div class="crumb">7 arte <em>/</em> <span data-sq="Publikime" data-en="Publications">Publikime</span> <em>/</em> <span data-sq="Raporte vjetore" data-en="Annual reports">Raporte vjetore</span></div>
+  <h1><span data-sq="Raporte" data-en="Annual">Raporte</span> <em data-sq="vjetore." data-en="reports.">vjetore.</em></h1></div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap"><div class="rows obs">
+    <div class="rw"><span class="n">2024</span><b data-sq="Raporti vjetor 2024" data-en="Annual report 2024">Raporti vjetor 2024</b><i>PDF · SQ</i></div>
+    <div class="rw"><span class="n">2023</span><b data-sq="Raporti vjetor 2023" data-en="Annual report 2023">Raporti vjetor 2023</b><i>PDF · SQ</i></div>
+    <div class="rw"><span class="n">2022</span><b data-sq="Raporti vjetor 2022" data-en="Annual report 2022">Raporti vjetor 2022</b><i>PDF · SQ</i></div>
+  </div></div></section>
+</main>
+
+<main class="page" id="p-reports-project">
+  <div class="phero"><div class="wrap"><div class="crumb">7 arte <em>/</em> <span data-sq="Publikime" data-en="Publications">Publikime</span> <em>/</em> <span data-sq="Raporte projektesh" data-en="Project reports">Raporte projektesh</span></div>
+  <h1><span data-sq="Raporte" data-en="Project">Raporte</span> <em data-sq="projektesh." data-en="reports.">projektesh.</em></h1></div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap"><div class="rows obs">
+    <div class="rw"><span class="n">01</span><b>Green Fest 16 · REFLEKTO</b><i>2026 · PDF</i></div>
+    <div class="rw"><span class="n">02</span><b data-sq="Visit Trepça, viti pilot" data-en="Visit Trepça, pilot year">Visit Trepça, viti pilot</b><i>2024 · PDF</i></div>
+    <div class="rw"><span class="n">03</span><b data-sq="Vizionimi i hapësirave industriale" data-en="Visioning of industrial spaces">Vizionimi i hapësirave industriale</b><i>2022 · PDF</i></div>
+    <div class="rw"><span class="n">04</span><b data-sq="Rinia për trashëgimi kulturore" data-en="Youth for cultural heritage">Rinia për trashëgimi kulturore</b><i>2022 · PDF</i></div>
+  </div></div></section>
+</main>
+
+<main class="page" id="p-research">
+  <div class="phero"><div class="wrap"><div class="crumb">7 arte <em>/</em> <span data-sq="Publikime" data-en="Publications">Publikime</span> <em>/</em> <span data-sq="Hulumtime" data-en="Research">Hulumtime</span></div>
+  <h1><span data-sq="Hulumtime" data-en="Research">Hulumtime</span> <em data-sq="dhe libra." data-en="and books.">dhe libra.</em></h1></div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap"><div class="cards obs">
+    <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2023/05/Kujtesa-e-Trepces.jpg" alt=""></div><div class="b"><h3>Kujtesa e Trepçës</h3><p data-sq="Libër me dëshmi, intervista dhe fotografi nga njerëzit që punuan në Trepçë." data-en="A book of testimony, interviews and photographs from the people who worked at Trepça.">Libër me dëshmi, intervista dhe fotografi nga njerëzit që punuan në Trepçë.</p><div class="meta" data-sq="Libër · Dyqani" data-en="Book · Shop">Libër · Dyqani</div></div></div>
+    <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2023/04/foto1-1024x590-1.jpg" alt=""></div><div class="b"><h3 data-sq="Sfidat e zhvillimit kulturor" data-en="Cultural development challenges">Sfidat e zhvillimit kulturor</h3><p data-sq="Hulumtim mbi gjendjen e kulturës në Mitrovicë dhe hapat e mëtutjeshëm." data-en="Research on the state of culture in Mitrovica and the next steps.">Hulumtim mbi gjendjen e kulturës në Mitrovicë dhe hapat e mëtutjeshëm.</p><div class="meta">PDF</div></div></div>
+    <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2023/04/11122-1024x678-1.jpg" alt=""></div><div class="b"><h3 data-sq="Trashëgimia industriale" data-en="Industrial heritage">Trashëgimia industriale</h3><p data-sq="Dokumentim i hapësirave industriale të Mitrovicës dhe potencialit të tyre." data-en="Documentation of Mitrovica's industrial spaces and their potential.">Dokumentim i hapësirave industriale të Mitrovicës dhe potencialit të tyre.</p><div class="meta">PDF</div></div></div>
+  </div></div></section>
+</main>
+
+<main class="page" id="p-jobs">
+  <div class="phero"><div class="wrap"><div class="crumb">7 arte <em>/</em> <span data-sq="Punë" data-en="Jobs">Punë</span></div>
+  <h1><span data-sq="Puno" data-en="Work">Puno</span> <em data-sq="me ne." data-en="with us.">me ne.</em></h1></div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap"><div class="rows obs">
+    <div class="rw"><span class="n">01</span><b data-sq="Thirrje për vullnetarë, Green Fest" data-en="Call for volunteers, Green Fest">Thirrje për vullnetarë, Green Fest</b><i data-sq="E hapur" data-en="Open">E hapur</i></div>
+    <div class="rw"><span class="n">02</span><b data-sq="Udhërrëfyes për turat e Visit Trepça" data-en="Guide for Visit Trepça tours">Udhërrëfyes për turat e Visit Trepça</b><i data-sq="E hapur" data-en="Open">E hapur</i></div>
+    <div class="rw"><span class="n">03</span><b data-sq="Praktikë në komunikim dhe rrjete sociale" data-en="Internship in communications and social media">Praktikë në komunikim dhe rrjete sociale</b><i data-sq="E mbyllur" data-en="Closed">E mbyllur</i></div>
+  </div></div></section>
+</main>
+
+<main class="page" id="p-services">
+  <div class="phero"><div class="wrap"><div class="crumb">7 arte <em>/</em> <span data-sq="Shërbime" data-en="Services">Shërbime</span></div>
+  <h1><span data-sq="Çka" data-en="What we">Çka</span> <em data-sq="ofrojmë." data-en="offer.">ofrojmë.</em></h1></div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap"><div class="cards obs">
+    <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2025/04/370564568_334105802305090_1486941322524659947_n.jpg" alt=""></div><div class="b"><h3 data-sq="Hapësira me qira" data-en="Space for hire">Hapësira me qira</h3><p data-sq="Salla dhe hapësira për ngjarje, punëtori, prezantime dhe xhirime." data-en="Halls and spaces for events, workshops, presentations and shoots.">Salla dhe hapësira për ngjarje, punëtori, prezantime dhe xhirime.</p><div class="meta" data-sq="Çmime me kërkesë" data-en="Rates on request">Çmime me kërkesë</div></div></div>
+    <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://www.7-arte.org/wp-content/uploads/2026/02/051A9768-scaled.jpg" alt=""></div><div class="b"><h3 data-sq="Produksion video dhe foto" data-en="Video and photo production">Produksion video dhe foto</h3><p data-sq="Xhirim, montazh dhe fotografi për organizata, institucione dhe biznese." data-en="Shooting, editing and photography for organisations, institutions and businesses.">Xhirim, montazh dhe fotografi për organizata, institucione dhe biznese.</p><div class="meta" data-sq="Ekip vendor" data-en="Local crew">Ekip vendor</div></div></div>
+    <div class="card"><div class="shot mos" data-cols="8" data-rows="6"><img src="https://visittrepca.com/wp-content/uploads/2024/06/13-min-scaled.jpg" alt=""></div><div class="b"><h3 data-sq="Tura për grupe" data-en="Group tours">Tura për grupe</h3><p data-sq="Tura të organizuara në Trepçë për shkolla, delegacione dhe hulumtues." data-en="Organised tours at Trepça for schools, delegations and researchers.">Tura të organizuara në Trepçë për shkolla, delegacione dhe hulumtues.</p><div class="meta" data-sq="Me rezervim" data-en="By booking">Me rezervim</div></div></div>
+  </div></div></section>
+</main>
+
+<main class="page" id="p-support">
+  <div class="phero"><div class="wrap"><div class="crumb">7 arte <em>/</em> <span data-sq="Na mbështet" data-en="Support us">Na mbështet</span></div>
+  <h1><span data-sq="Rikthe rrënjët" data-en="Bring your roots">Rikthe rrënjët</span><br><em data-sq="në atdheun tënd." data-en="back home.">në atdheun tënd.</em></h1>
+  <p class="lede" style="margin-top:24px" data-sq="Të rrisim rolin e diasporës në zhvillimin e qëndrueshëm të rajonit të Mitrovicës, duke sjellë investime dhe përvojat e tyre në përmirësimin e mjedisit." data-en="Growing the role of the diaspora in the sustainable development of the Mitrovica region, bringing investment and experience to improve the environment.">Të rrisim rolin e diasporës në zhvillimin e qëndrueshëm të rajonit të Mitrovicës, duke sjellë investime dhe përvojat e tyre në përmirësimin e mjedisit.</p></div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap">
+    <div class="cards obs">
+      <div class="card"><div class="b"><h3 data-sq="Dhuro" data-en="Donate">Dhuro</h3><p data-sq="Një dhuratë e njëhershme ose mbështetje e rregullt mujore për programet tona." data-en="A one-off gift or regular monthly support for our programmes.">Një dhuratë e njëhershme ose mbështetje e rregullt mujore për programet tona.</p><div class="meta" data-sq="Njëherësh · Mujore" data-en="One-off · Monthly">Njëherësh · Mujore</div></div></div>
+      <div class="card"><div class="b"><h3 data-sq="Bëhu sponsor" data-en="Become a sponsor">Bëhu sponsor</h3><p data-sq="Paketat e sponsorizimit për Green Fest dhe MitroRun, me dukshmëri në qytet." data-en="Sponsorship packages for Green Fest and MitroRun, with visibility across the city.">Paketat e sponsorizimit për Green Fest dhe MitroRun, me dukshmëri në qytet.</p><div class="meta">info@7-arte.org</div></div></div>
+      <div class="card"><div class="b"><h3 data-sq="Bëhu vullnetar" data-en="Volunteer">Bëhu vullnetar</h3><p data-sq="Festivali, turat dhe akademia mbahen çdo vit edhe nga dhjetëra vullnetarë." data-en="The festival, the tours and the academy are held up every year by dozens of volunteers.">Festivali, turat dhe akademia mbahen çdo vit edhe nga dhjetëra vullnetarë.</p><div class="meta" data-sq="Thirrje e hapur" data-en="Open call">Thirrje e hapur</div></div></div>
+    </div>
+    <div class="cta obs" style="margin-top:clamp(28px,4vw,54px)">
+      <div class="deco"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <h2><span data-sq="Le të flasim" data-en="Let's talk">Le të flasim</span> <em data-sq="për bashkëpunim." data-en="about working together.">për bashkëpunim.</em></h2>
+      <a class="btn" href="mailto:info@7-arte.org">info@7-arte.org →</a>
+    </div>
+  </div></section>
+</main>
+
+<main class="page" id="p-faq">
+  <div class="phero"><div class="wrap"><div class="crumb">7 arte <em>/</em> FAQ</div>
+  <h1><span data-sq="Pyetje" data-en="Frequently">Pyetje</span> <em data-sq="të shpeshta." data-en="asked.">të shpeshta.</em></h1></div></div>
+  <section style="padding-top:clamp(18px,2.6vw,36px)"><div class="wrap"><div class="acc obs">
+    <details open><summary data-sq="Si mund ta vizitoj Trepçën?" data-en="How can I visit Trepça?">Si mund ta vizitoj Trepçën?</summary><div class="bd" data-sq="Turat organizohen me rezervim paraprak përmes Visit Trepça. Ka tri lloje turash, brenda kompleksit, jashtë tij dhe Purple Tour." data-en="Tours are organised by advance booking through Visit Trepça. There are three types: inside the complex, outside it, and the Purple Tour.">Turat organizohen me rezervim paraprak përmes Visit Trepça. Ka tri lloje turash, brenda kompleksit, jashtë tij dhe Purple Tour.</div></details>
+    <details><summary data-sq="Kur mbahet Green Fest?" data-en="When is Green Fest held?">Kur mbahet Green Fest?</summary><div class="bd" data-sq="Green Fest mbahet një herë në vit dhe zgjat pesë ditë. Datat shpallen disa muaj përpara, së bashku me temën dhe line-up-in." data-en="Green Fest is held once a year and lasts five days. Dates are announced a few months ahead, along with the theme and the line-up.">Green Fest mbahet një herë në vit dhe zgjat pesë ditë. Datat shpallen disa muaj përpara, së bashku me temën dhe line-up-in.</div></details>
+    <details><summary data-sq="Si aplikoj për trajnimet e Academy?" data-en="How do I apply for Academy trainings?">Si aplikoj për trajnimet e Academy?</summary><div class="bd" data-sq="Çdo trajnim ka thirrjen e vet të hapur. Aplikimi bëhet online përmes formularit në faqen e trajnimit. Vendet janë të kufizuara." data-en="Each training has its own open call. Applications are made online through the form on the training page. Places are limited.">Çdo trajnim ka thirrjen e vet të hapur. Aplikimi bëhet online përmes formularit në faqen e trajnimit. Vendet janë të kufizuara.</div></details>
+    <details><summary data-sq="A mund të bëhem vullnetar?" data-en="Can I volunteer?">A mund të bëhem vullnetar?</summary><div class="bd" data-sq="Po. Thirrja hapet çdo vit para Green Fest, po ka nevojë për ndihmë edhe gjatë vitit, në tura, punëtori dhe ngjarje." data-en="Yes. The call opens every year before Green Fest, but help is needed throughout the year on tours, workshops and events.">Po. Thirrja hapet çdo vit para Green Fest, po ka nevojë për ndihmë edhe gjatë vitit, në tura, punëtori dhe ngjarje.</div></details>
+    <details><summary data-sq="A jepni hapësira me qira?" data-en="Do you rent out spaces?">A jepni hapësira me qira?</summary><div class="bd" data-sq="Po. Hapësirat mund të merren me qira për ngjarje, punëtori, prezantime dhe xhirime. Çmimet jepen me kërkesë." data-en="Yes. Spaces can be hired for events, workshops, presentations and shoots. Rates are given on request.">Po. Hapësirat mund të merren me qira për ngjarje, punëtori, prezantime dhe xhirime. Çmimet jepen me kërkesë.</div></details>
+  </div></div></section>
+</main>
+
+<div id="lb">
+  <button class="x" id="lbX">✕</button><button class="pv" id="lbP">‹</button><button class="nx2" id="lbN">›</button>
+  <div class="fr"><img id="lbI" src="" alt=""></div><div class="ct" id="lbC"></div>
+</div>
+<button id="top">↑</button>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="logo" style="margin-bottom:14px"><img src="https://mitro.run/wp-content/uploads/2026/08/logo-7arte-new-removebg-preview-e1787318113237-294x300.png" alt="7 Arte" onerror="lgFall(this)"><b class="lgtxt">7arte</b></div>
+        <p style="font-size:14px;line-height:1.7;color:var(--fg2);max-width:32ch" data-sq="Organizatë kulturore në Mitrovicë, Kosovë. Themeluar më 2 maj 2006. Anëtare e Trans Europe Halles." data-en="Cultural organisation in Mitrovicë, Kosovë. Founded 2 May 2006. Member of Trans Europe Halles.">Organizatë kulturore në Mitrovicë, Kosovë. Themeluar më 2 maj 2006. Anëtare e Trans Europe Halles.</p>
+        <a href="mailto:info@7-arte.org" style="color:var(--c);margin-top:12px">info@7-arte.org</a>
+        <a href="tel:+38338748861" style="color:var(--c)">+383 38 748 861</a>
+      </div>
+      <div><h5 data-sq="Projektet" data-en="Projects">Projektet</h5><a href="#/greenfest">Green Fest</a><a href="#/trepca">Visit Trepça</a><a href="#/mitrorun">MitroRun</a><a href="#/academy">7Arte Academy</a><a href="#/past" data-sq="Arkivi" data-en="Archive">Arkivi</a></div>
+      <div><h5 data-sq="Organizata" data-en="Organisation">Organizata</h5><a href="#/about" data-sq="Rreth nesh" data-en="About us">Rreth nesh</a><a href="#/history" data-sq="Historia" data-en="History">Historia</a><a href="#/staff" data-sq="Stafi" data-en="Staff">Stafi</a><a href="#/news" data-sq="Lajme" data-en="News">Lajme</a><a href="#/publications" data-sq="Publikime" data-en="Publications">Publikime</a></div>
+      <div><h5 data-sq="Përfshihu" data-en="Get involved">Përfshihu</h5><a href="#/support" data-sq="Dhuro" data-en="Donate">Dhuro</a><a href="#/jobs" data-sq="Punë" data-en="Jobs">Punë</a><a href="#/services" data-sq="Shërbime" data-en="Services">Shërbime</a><a href="#/contact" data-sq="Kontakt" data-en="Contact">Kontakt</a><a href="#/faq">FAQ</a></div>
+    </div>
+    <div class="fb"><span>© 2026 7arte · Mitrovicë, Kosovë</span><span data-sq="Koncept, jo dizajn përfundimtar" data-en="Concept, not a final design">Koncept, jo dizajn përfundimtar</span><span>Papingu</span></div>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

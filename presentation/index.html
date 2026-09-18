@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 Arte — Koncepti i platformës</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--c:#C4186F;--c2:#FBEAF3;--ink:#111114;--ink2:#5C5C66;--mute:#9A9AA4;--ln:rgba(17,17,20,.12);--soft:#F4F4F6;
+--sans:'Manrope',sans-serif;--mono:'DM Mono',monospace;--e:cubic-bezier(.16,1,.3,1)}
+body{background:#fff;color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow:hidden;height:100vh}
+button{font-family:inherit;cursor:pointer}
+.deck{height:100vh;position:relative}
+.s{position:absolute;inset:0;padding:clamp(28px,6vh,72px) clamp(24px,6vw,110px);display:none;flex-direction:column;justify-content:center;overflow-y:auto}
+.s.on{display:flex;animation:in .5s var(--e) both}
+@keyframes in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.num{position:absolute;top:clamp(20px,3vh,34px);left:clamp(24px,6vw,110px);font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--mute)}
+.kick{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:clamp(14px,2.4vh,26px)}
+.pix{display:flex;gap:4px}
+.pix i{width:9px;height:9px;background:var(--c);display:block}
+.pix i:nth-child(2){opacity:.6}.pix i:nth-child(3){opacity:.35}.pix i:nth-child(4){opacity:.15}
+h1{font-size:clamp(34px,6.4vw,92px);font-weight:800;line-height:.95;letter-spacing:-.055em}
+h1 em{font-style:normal;color:var(--c)}
+h2{font-size:clamp(26px,3.9vw,56px);font-weight:800;line-height:1;letter-spacing:-.05em;max-width:22ch}
+h2 em{font-style:normal;color:var(--c)}
+p.l{font-size:clamp(14.5px,1.5vw,21px);line-height:1.58;color:var(--ink2);max-width:56ch;margin-top:clamp(12px,2vh,22px)}
+ul{list-style:none;margin-top:clamp(14px,2.4vh,28px);max-width:70ch}
+li{font-size:clamp(14px,1.35vw,18.5px);line-height:1.5;padding:11px 0 11px 30px;border-bottom:1px solid var(--ln);position:relative;color:var(--ink2)}
+li::before{content:"";position:absolute;left:0;top:18px;width:9px;height:9px;background:var(--c)}
+li b{color:var(--ink);font-weight:700}
+.cols{display:grid;gap:clamp(14px,2vw,30px);margin-top:clamp(14px,2.4vh,28px)}
+.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:repeat(3,1fr)}.c4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:800px){.c2,.c3,.c4{grid-template-columns:1fr}}
+.bx{border:1px solid var(--ln);border-radius:14px;padding:clamp(16px,2vw,26px)}
+.bx h3{font-size:clamp(16px,1.6vw,21px);font-weight:800;letter-spacing:-.03em;margin-bottom:8px}
+.bx p{font-size:clamp(12.5px,1.15vw,15px);line-height:1.55;color:var(--ink2)}
+.bx .t{font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:var(--c);text-transform:uppercase;margin-bottom:10px}
+.bx.fill{background:var(--c2);border-color:transparent}
+.big{font-size:clamp(34px,4.4vw,62px);font-weight:800;letter-spacing:-.055em;line-height:1;color:var(--c)}
+.big+span{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;color:var(--mute);text-transform:uppercase;display:block;margin-top:8px}
+table{width:100%;border-collapse:collapse;margin-top:clamp(12px,2.2vh,24px);font-size:clamp(12.5px,1.15vw,15.5px)}
+th,td{text-align:left;padding:11px 12px 11px 0;border-bottom:1px solid var(--ln);vertical-align:top}
+th{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);font-weight:400}
+td b{font-weight:700}
+td.hl{color:var(--c);font-weight:700}
+.quote{background:var(--c);color:#fff;border-radius:18px;padding:clamp(24px,4vw,58px);position:relative;overflow:hidden}
+.quote p{font-size:clamp(20px,2.9vw,42px);font-weight:800;letter-spacing:-.04em;line-height:1.18;max-width:28ch}
+.quote span{font-family:var(--mono);font-size:10px;letter-spacing:.14em;opacity:.8;display:block;margin-top:18px;text-transform:uppercase}
+.quote .d{position:absolute;right:-10px;bottom:-10px;display:grid;grid-template-columns:repeat(5,20px);grid-auto-rows:20px;gap:6px;opacity:.22}
+.quote .d i{background:#fff;display:block}
+.sw{display:flex;gap:10px;margin-top:clamp(14px,2.4vh,28px);flex-wrap:wrap}
+.sw div{flex:1;min-width:130px;border-radius:12px;padding:clamp(14px,1.8vw,22px);color:#fff}
+.sw div b{display:block;font-size:clamp(15px,1.6vw,21px);font-weight:800;letter-spacing:-.03em}
+.sw div span{font-family:var(--mono);font-size:9px;letter-spacing:.12em;opacity:.85;display:block;margin-top:6px}
+footer{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:14px clamp(24px,6vw,110px);border-top:1px solid var(--ln);background:#fff}
+.ctrls{display:flex;gap:8px;align-items:center}
+.ctrls button{width:36px;height:36px;border-radius:50%;border:1px solid var(--ln);background:none;font-size:15px;font-weight:800;color:var(--ink)}
+.ctrls button:hover{background:var(--ink);color:#fff}
+.meta{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;color:var(--mute);text-transform:uppercase}
+.lang{display:flex;border:1px solid var(--ln);border-radius:99px;overflow:hidden}
+.lang button{background:none;border:0;font-family:var(--mono);font-size:9.5px;padding:6px 10px;color:var(--mute);width:auto;height:auto;border-radius:0}
+.lang button.on{background:var(--ink);color:#fff}
+#bar{position:absolute;top:0;left:0;height:3px;background:var(--c);width:0;transition:width .35s var(--e);z-index:20}
+.pixwall{display:grid;grid-template-columns:repeat(8,clamp(14px,1.8vw,26px));grid-auto-rows:clamp(14px,1.8vw,26px);gap:clamp(4px,.6vw,8px);margin-bottom:clamp(18px,3vh,34px)}
+.pixwall i{background:var(--c);display:block}
+.pixwall i.a{opacity:.5}.pixwall i.b{opacity:.22}.pixwall i.c{opacity:0}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div class="deck" id="deck">
+
+<!-- 1 -->
+<section class="s on">
+  <div class="num">01</div>
+  <div class="pixwall">
+    <i></i><i class="a"></i><i class="c"></i><i></i><i class="b"></i><i class="c"></i><i></i><i class="a"></i>
+    <i class="a"></i><i></i><i class="b"></i><i class="c"></i><i></i><i class="a"></i><i class="c"></i><i></i>
+    <i class="c"></i><i class="b"></i><i></i><i class="a"></i><i class="c"></i><i></i><i class="b"></i><i class="c"></i>
+  </div>
+  <h1><span data-sq="Një platformë." data-en="One platform.">Një platformë.</span><br><em data-sq="Katër identitete." data-en="Four identities.">Katër identitete.</em></h1>
+  <p class="l" data-sq="Koncept për bashkimin e faqeve të 7Arte në një platformë të vetme, pa i humbur brendet." data-en="A concept for merging 7Arte's websites into a single platform without losing the brands.">Koncept për bashkimin e faqeve të 7Arte në një platformë të vetme, pa i humbur brendet.</p>
+  <div class="meta" style="margin-top:clamp(20px,3.4vh,40px)">PAPINGU · OJQ 7ARTE · 2026</div>
+</section>
+
+<!-- 2 -->
+<section class="s">
+  <div class="num">02</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Gjendja" data-en="The situation">Gjendja</span></div>
+  <h2><span data-sq="Katër faqe," data-en="Four websites,">Katër faqe,</span> <em data-sq="një organizatë." data-en="one organisation.">një organizatë.</em></h2>
+  <table>
+    <tr><th data-sq="Faqja" data-en="Site">Faqja</th><th data-sq="Platforma" data-en="Platform">Platforma</th><th data-sq="Gjendja" data-en="State">Gjendja</th></tr>
+    <tr><td><b>7-arte.org</b></td><td>Visual Composer</td><td data-sq="Menu të thyera, kalendar bosh, widget Facebook i vdekur" data-en="Broken menu links, empty calendar, dead Facebook widget">Menu të thyera, kalendar bosh, widget Facebook i vdekur</td></tr>
+    <tr><td><b>mitrovicagreenfest.com</b></td><td>Qode / Harrisia</td><td data-sq="Më e mira nga të tria, po logot vijnë prej serverit demo të temës" data-en="The healthiest of the three, but logos load from the theme vendor's demo server">Më e mira nga të tria, po logot vijnë prej serverit demo të temës</td></tr>
+    <tr><td><b>visittrepca.com</b></td><td>Qode / Wanderland</td><td data-sq="Linqe që dërgojnë te faqja demo e temës, menu të dubluara" data-en="Links that send visitors to the theme demo site, duplicated menus">Linqe që dërgojnë te faqja demo e temës, menu të dubluara</td></tr>
+    <tr><td><b>mitro.run</b></td><td data-sq="E ndërtuar tash" data-en="Newly built">E ndërtuar tash</td><td data-sq="Në rregull, mbetet e veçantë" data-en="Fine, stays standalone">Në rregull, mbetet e veçantë</td></tr>
+  </table>
+  <p class="l" data-sq="Tri tema, tri grupe licencash, tri cikle përditësimi, tri herë puna redaktoriale. Dhe të njëjtat lajme publikohen nga dora në dy ose tri vende." data-en="Three themes, three sets of licences, three update cycles, three times the editorial work. And the same news items published by hand in two or three places.">Tri tema, tri grupe licencash, tri cikle përditësimi, tri herë puna redaktoriale. Dhe të njëjtat lajme publikohen nga dora në dy ose tri vende.</p>
+</section>
+
+<!-- 3 -->
+<section class="s">
+  <div class="num">03</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Tri gjetje" data-en="Three findings">Tri gjetje</span></div>
+  <h2><span data-sq="Çka nuk" data-en="What is not">Çka nuk</span> <em data-sq="duket në sipërfaqe." data-en="visible on the surface.">duket në sipërfaqe.</em></h2>
+  <div class="cols c3">
+    <div class="bx"><div class="t">01</div><h3 data-sq="Logot në server të huaj" data-en="Logos on someone else's server">Logot në server të huaj</h3><p data-sq="Dy nga logot e juaja ngarkohen nga serveri demo i shitësit të temës. Nëse ai server bie, brendi zhduket." data-en="Two of your logos load from the theme vendor's demo server. If that server goes down, the branding disappears.">Dy nga logot e juaja ngarkohen nga serveri demo i shitësit të temës. Nëse ai server bie, brendi zhduket.</p></div>
+    <div class="bx"><div class="t">02</div><h3 data-sq="Kalendar bosh" data-en="An empty calendar">Kalendar bosh</h3><p data-sq="Faqja kryesore shfaq publikisht një muaj të tërë me shënimin No Events." data-en="The main site publicly displays a whole month labelled No Events.">Faqja kryesore shfaq publikisht një muaj të tërë me shënimin No Events.</p></div>
+    <div class="bx"><div class="t">03</div><h3 data-sq="Linqe që dërgojnë gabim" data-en="Links that send people away">Linqe që dërgojnë gabim</h3><p data-sq="Visit Trepça dërgon vizitorët te faqja demo e një agjencie turistike që nuk ka lidhje me juve." data-en="Visit Trepça sends visitors to the demo site of an unrelated travel agency.">Visit Trepça dërgon vizitorët te faqja demo e një agjencie turistike që nuk ka lidhje me juve.</p></div>
+  </div>
+  <p class="l" data-sq="Këto nuk janë çështje dizajni. Janë çështje kapaciteti. Dhe ky është argumenti i vërtetë për bashkimin." data-en="These are not design problems. They are capacity problems. And that is the real argument for merging.">Këto nuk janë çështje dizajni. Janë çështje kapaciteti. Dhe ky është argumenti i vërtetë për bashkimin.</p>
+</section>
+
+<!-- 4 -->
+<section class="s">
+  <div class="num">04</div>
+  <div class="quote">
+    <div class="d"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p>“Shumë punë 3 weba me i mbajtë e asnjonin mirë.”</p>
+    <span data-sq="OJQ 7Arte" data-en="OJQ 7Arte">OJQ 7Arte</span>
+  </div>
+  <p class="l" data-sq="Ky është argumenti që e hap buxhetin. Donatorët nuk financojnë ridizajn. Financojnë qëndrueshmëri dhe efiçiencë." data-en="This is the argument that unlocks the budget. Donors do not fund redesigns. They fund sustainability and efficiency.">Ky është argumenti që e hap buxhetin. Donatorët nuk financojnë ridizajn. Financojnë qëndrueshmëri dhe efiçiencë.</p>
+</section>
+
+<!-- 5 -->
+<section class="s">
+  <div class="num">05</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Kursimi" data-en="The saving">Kursimi</span></div>
+  <h2><span data-sq="Çka kushton" data-en="What three sites">Çka kushton</span> <em data-sq="mbajtja e tri faqeve." data-en="actually cost.">mbajtja e tri faqeve.</em></h2>
+  <table>
+    <tr><th data-sq="Zëri" data-en="Line">Zëri</th><th data-sq="Tri faqe" data-en="Three sites">Tri faqe</th><th data-sq="Një platformë" data-en="One platform">Një platformë</th><th data-sq="Kursim vjetor" data-en="Annual saving">Kursim vjetor</th></tr>
+    <tr><td data-sq="Orë mirëmbajtjeje" data-en="Maintenance hours">Orë mirëmbajtjeje</td><td>60 – 84 h</td><td>24 – 36 h</td><td class="hl">36 – 48 h</td></tr>
+    <tr><td data-sq="Kosto mirëmbajtjeje" data-en="Maintenance cost">Kosto mirëmbajtjeje</td><td>€2.700 – 3.780</td><td>€1.080 – 1.620</td><td class="hl">€1.600 – 2.200</td></tr>
+    <tr><td>Hosting</td><td>3 × ~€15/mo</td><td>1 × ~€30/mo</td><td class="hl">€180 – 360</td></tr>
+    <tr><td data-sq="Licenca temash dhe plugin-eve" data-en="Theme and plugin licences">Licenca temash dhe plugin-eve</td><td data-sq="3 grupe" data-en="3 sets">3 grupe</td><td data-sq="1 grup" data-en="1 set">1 grup</td><td class="hl">€200 – 300</td></tr>
+    <tr><td><b data-sq="Gjithsej" data-en="Total">Gjithsej</b></td><td></td><td></td><td class="hl">€2.000 – 2.900</td></tr>
+  </table>
+  <p class="l" data-sq="Plus 40 deri 60 orë në vit kohë redaktoriale, sepse i njëjti lajm nuk publikohet më dy ose tri herë." data-en="Plus 40 to 60 hours a year of editorial time, because the same item is no longer published two or three times.">Plus 40 deri 60 orë në vit kohë redaktoriale, sepse i njëjti lajm nuk publikohet më dy ose tri herë.</p>
+</section>
+
+<!-- 6 -->
+<section class="s">
+  <div class="num">06</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Frika" data-en="The worry">Frika</span></div>
+  <h2><span data-sq="Si t'i bashkojmë" data-en="How do we merge">Si t'i bashkojmë</span> <em data-sq="pa i humbur brendet?" data-en="without losing the brands?">pa i humbur brendet?</em></h2>
+  <div class="cols c2">
+    <div class="bx"><div class="t" data-sq="Çka i humb brendet" data-en="What kills a brand">Çka i humb brendet</div><ul style="margin-top:4px">
+      <li data-sq="Green Fest bëhet një rresht në menyn Projekte" data-en="Green Fest becomes one line in the Projects menu">Green Fest bëhet një rresht në menyn Projekte</li>
+      <li data-sq="E njëjta shabllon dhe e njëjta ngjyrë për krejt" data-en="The same template and colour for everything">E njëjta shabllon dhe e njëjta ngjyrë për krejt</li>
+      <li data-sq="Logoja e 7Arte dominon në çdo faqe" data-en="The 7Arte logo dominates every page">Logoja e 7Arte dominon në çdo faqe</li>
+      <li data-sq="Një newsletter dhe një Instagram për krejt" data-en="One newsletter and one Instagram for everything">Një newsletter dhe një Instagram për krejt</li>
+    </ul></div>
+    <div class="bx fill"><div class="t" data-sq="Çka nuk i humb" data-en="What does not">Çka nuk i humb</div><ul style="margin-top:4px">
+      <li data-sq="Adresa 7-arte.org/green-fest/" data-en="Living at 7-arte.org/green-fest/">Adresa 7-arte.org/green-fest/</li>
+      <li data-sq="Një bazë e vetme e të dhënave poshtë" data-en="One shared database underneath">Një bazë e vetme e të dhënave poshtë</li>
+      <li data-sq="Një sistem i vetëm publikimi" data-en="One publishing system">Një sistem i vetëm publikimi</li>
+      <li data-sq="Një rresht i vogël Projekt i 7Arte në footer" data-en="A small 'A 7Arte project' line in the footer">Një rresht i vogël Projekt i 7Arte në footer</li>
+    </ul></div>
+  </div>
+  <p class="l" data-sq="Brendi nuk humbet prej adresës. Humbet prej dizajnit." data-en="A brand is not lost because of its URL. It is lost because of its design.">Brendi nuk humbet prej adresës. Humbet prej dizajnit.</p>
+</section>
+
+<!-- 7 -->
+<section class="s">
+  <div class="num">07</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Zgjidhja" data-en="The answer">Zgjidhja</span></div>
+  <h2><span data-sq="Një platformë," data-en="One platform,">Një platformë,</span> <em data-sq="katër mikro-faqe." data-en="four microsites.">katër mikro-faqe.</em></h2>
+  <p class="l" data-sq="Kur hyn në një projekt, ndryshon krejt faqja. Sfondi, ngjyrat, shkronjat, edhe header-i. Shfaqet një navigim i dytë vetëm për ato seksione, me thirrjen e vet." data-en="When you enter a project the whole page changes. Background, colours, typography, even the header. A second navigation appears for that project's own sections, with its own call to action.">Kur hyn në një projekt, ndryshon krejt faqja. Sfondi, ngjyrat, shkronjat, edhe header-i. Shfaqet një navigim i dytë vetëm për ato seksione, me thirrjen e vet.</p>
+  <div class="sw">
+    <div style="background:#0C1410"><b>Green Fest</b><span data-sq="Gjelbër i thellë · shkronja të shtypura" data-en="Deep green · condensed caps">Gjelbër i thellë · shkronja të shtypura</span></div>
+    <div style="background:#6A45B8"><b>Visit Trepça</b><span data-sq="Letër guri · serif · arkivore" data-en="Stone paper · serif · archival">Letër guri · serif · arkivore</span></div>
+    <div style="background:#0A0B0A"><b>MitroRun</b><span data-sq="Zi dhe portokalli · numra të mëdhenj" data-en="Black and orange · big numerals">Zi dhe portokalli · numra të mëdhenj</span></div>
+    <div style="background:#1560C4"><b>Academy</b><span data-sq="Bardhë dhe blu · funksionale" data-en="White and blue · functional">Bardhë dhe blu · funksionale</span></div>
+  </div>
+  <p class="l" data-sq="Secila mban lajmet e vet, galerinë e vet, sponsorët e vet, formularët e vet dhe domainin e vet, që vazhdon të punojë përmes ridrejtimit." data-en="Each keeps its own news, its own gallery, its own sponsors, its own forms and its own domain, which keeps working through the redirect.">Secila mban lajmet e vet, galerinë e vet, sponsorët e vet, formularët e vet dhe domainin e vet, që vazhdon të punojë përmes ridrejtimit.</p>
+</section>
+
+<!-- 8 -->
+<section class="s">
+  <div class="num">08</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Struktura" data-en="The structure">Struktura</span></div>
+  <h2><span data-sq="Dy akse," data-en="Two axes,">Dy akse,</span> <em data-sq="një depo përmbajtjeje." data-en="one content pool.">një depo përmbajtjeje.</em></h2>
+  <div class="cols c2">
+    <div class="bx"><div class="t" data-sq="Aksi A · Programet" data-en="Axis A · Programmes">Aksi A · Programet</div><h3>TREPÇART · GREEN · INNOVATION</h3><p data-sq="Për donatorë, bord dhe raportim. Ristrukturohet me çdo cikël strategjik." data-en="For donors, board and reporting. Restructured with each strategy cycle.">Për donatorë, bord dhe raportim. Ristrukturohet me çdo cikël strategjik.</p></div>
+    <div class="bx"><div class="t" data-sq="Aksi B · Projektet" data-en="Axis B · Projects">Aksi B · Projektet</div><h3>Green Fest · Visit Trepça · MitroRun · Academy</h3><p data-sq="Për publikun. Mban logon, paletën, shkronjat, domainin dhe mbështetësit." data-en="For the public. Carries the logo, palette, typeface, domain and supporters.">Për publikun. Mban logon, paletën, shkronjat, domainin dhe mbështetësit.</p></div>
+  </div>
+  <ul>
+    <li data-sq="Një thirrje për vullnetarë etiketohet <b>green</b> dhe <b>green-fest</b>. Shfaqet automatikisht në të dyja faqet." data-en="A volunteer call is tagged <b>green</b> and <b>green-fest</b>. It appears on both pages automatically.">Një thirrje për vullnetarë etiketohet <b>green</b> dhe <b>green-fest</b>. Shfaqet automatikisht në të dyja faqet.</li>
+    <li data-sq="Shkruhet një herë, përkthehet një herë, publikohet një herë." data-en="Written once, translated once, published once.">Shkruhet një herë, përkthehet një herë, publikohet një herë.</li>
+    <li data-sq="Kur strategjia ndryshon dhe programet rivizatohen, projektet nuk lëvizin dhe nuk e humbin publikun." data-en="When the strategy changes and the programmes are redrawn, the projects do not move and do not lose their audience.">Kur strategjia ndryshon dhe programet rivizatohen, projektet nuk lëvizin dhe nuk e humbin publikun.</li>
+  </ul>
+</section>
+
+<!-- 9 -->
+<section class="s">
+  <div class="num">09</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Adresat" data-en="URLs">Adresat</span></div>
+  <h2><span data-sq="Asnjë link" data-en="Nothing printed">Asnjë link</span> <em data-sq="i shtypur nuk vdes." data-en="goes dead.">i shtypur nuk vdes.</em></h2>
+  <table>
+    <tr><th data-sq="Prej" data-en="From">Prej</th><th data-sq="Në" data-en="To">Në</th><th data-sq="Lloji" data-en="Type">Lloji</th></tr>
+    <tr><td><b>mitrovicagreenfest.com/*</b></td><td>7-arte.org/green-fest/*</td><td class="hl">301</td></tr>
+    <tr><td><b>visittrepca.com/*</b></td><td>7-arte.org/visit-trepca/*</td><td class="hl">301</td></tr>
+    <tr><td><b>visittrepca.com/shop/*</b></td><td>7-arte.org/visit-trepca/shop/*</td><td class="hl">301</td></tr>
+    <tr><td><b>mitro.run</b></td><td data-sq="Mbetet i veçantë, i ndërlidhur" data-en="Stays standalone, cross-linked">Mbetet i veçantë, i ndërlidhur</td><td data-sq="Pa ndryshim" data-en="No change">Pa ndryshim</td></tr>
+  </table>
+  <ul>
+    <li data-sq="Domainet <b>mbesin të regjistruar përgjithmonë</b>. Gjashtëmbëdhjetë edicione posterash dhe prezantimesh për sponsorë vazhdojnë të punojnë." data-en="The domains <b>stay registered indefinitely</b>. Sixteen editions of posters and sponsor decks keep working.">Domainet <b>mbesin të regjistruar përgjithmonë</b>. Gjashtëmbëdhjetë edicione posterash dhe prezantimesh për sponsorë vazhdojnë të punojnë.</li>
+    <li data-sq="Rreth <b>300 deri 500 URL</b> hartohen një nga një, jo me një ridrejtim të përgjithshëm te faqja kryesore." data-en="Roughly <b>300 to 500 URLs</b> mapped one by one, not with a blanket redirect to the homepage.">Rreth <b>300 deri 500 URL</b> hartohen një nga një, jo me një ridrejtim të përgjithshëm te faqja kryesore.</li>
+  </ul>
+</section>
+
+<!-- 10 -->
+<section class="s">
+  <div class="num">10</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Dizajni" data-en="The design">Dizajni</span></div>
+  <h2><span data-sq="Identiteti juaj," data-en="Your identity,">Identiteti juaj,</span> <em data-sq="i përdorur si duhet." data-en="properly used.">i përdorur si duhet.</em></h2>
+  <div class="cols c3">
+    <div class="bx"><div class="t" data-sq="Ngjyra" data-en="Colour">Ngjyra</div><h3 style="color:#C4186F">#C4186F</h3><p data-sq="Magenta e 7Arte si ngjyra e vetme e theksit. Bardhë, zi, magenta. Tri ngjyra, asgjë më." data-en="7Arte magenta as the single accent. White, near-black, magenta. Three colours, nothing more.">Magenta e 7Arte si ngjyra e vetme e theksit. Bardhë, zi, magenta. Tri ngjyra, asgjë më.</p></div>
+    <div class="bx"><div class="t" data-sq="Rrjeti i pikselave" data-en="The pixel grid">Rrjeti i pikselave</div><h3 data-sq="Prej logos" data-en="From the logo">Prej logos</h3><p data-sq="Fjala arte në logon tuaj është e bërë prej kuadratëve. Ai rrjet bëhet motivi kryesor i faqes." data-en="The word arte in your logo is made of squares. That grid becomes the site's signature motif.">Fjala arte në logon tuaj është e bërë prej kuadratëve. Ai rrjet bëhet motivi kryesor i faqes.</p></div>
+    <div class="bx"><div class="t" data-sq="Fotografia" data-en="Photography">Fotografia</div><h3 data-sq="Bardhë e zi" data-en="Black and white">Bardhë e zi</h3><p data-sq="Ashtu si tash. Çdo fotografi shpërbëhet prej një mozaiku pikselash, si logoja që bëhet fotografi." data-en="Exactly as now. Every photo dissolves out of a pixel mosaic, like the logo resolving into a photograph.">Ashtu si tash. Çdo fotografi shpërbëhet prej një mozaiku pikselash, si logoja që bëhet fotografi.</p></div>
+  </div>
+  <p class="l" data-sq="Nuk është dizajn i ri. Është identiteti që e keni, i zbatuar në mënyrë konsistente." data-en="It is not a new identity. It is the one you already have, applied consistently.">Nuk është dizajn i ri. Është identiteti që e keni, i zbatuar në mënyrë konsistente.</p>
+</section>
+
+<!-- 11 -->
+<section class="s">
+  <div class="num">11</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Koncepti" data-en="The concept">Koncepti</span></div>
+  <h2><span data-sq="25 faqe," data-en="25 pages,">25 faqe,</span> <em data-sq="dy gjuhë." data-en="two languages.">dy gjuhë.</em></h2>
+  <div class="cols c4">
+    <div class="bx"><div class="big">25</div><span data-sq="Faqe të klikueshme" data-en="Clickable pages">Faqe të klikueshme</span></div>
+    <div class="bx"><div class="big">4</div><span data-sq="Mikro-faqe projektesh" data-en="Project microsites">Mikro-faqe projektesh</span></div>
+    <div class="bx"><div class="big">2</div><span data-sq="Gjuhë, shqip dhe anglisht" data-en="Languages, Albanian and English">Gjuhë, shqip dhe anglisht</span></div>
+    <div class="bx"><div class="big">0</div><span data-sq="Plugin-e sliders" data-en="Slider plugins">Plugin-e sliders</span></div>
+  </div>
+  <ul>
+    <li data-sq="Menyja e plotë, ashtu si e keni: Rreth nesh, Lajme, Projekte, Academy, Publikime, Shërbime" data-en="The full menu, exactly as you have it: About, News, Projects, Academy, Publications, Services">Menyja e plotë, ashtu si e keni: Rreth nesh, Lajme, Projekte, Academy, Publikime, Shërbime</li>
+    <li data-sq="Kërkim në faqe, galeri me lightbox, filtrim lajmesh, formularë rezervimi dhe aplikimi" data-en="Site search, lightbox galleries, news filtering, booking and application forms">Kërkim në faqe, galeri me lightbox, filtrim lajmesh, formularë rezervimi dhe aplikimi</li>
+    <li data-sq="Përmbajtja është marrë prej faqeve tuaja aktuale. Pjesa e trilluar është e listuar veçmas." data-en="The content is taken from your current sites. Everything invented is listed separately.">Përmbajtja është marrë prej faqeve tuaja aktuale. Pjesa e trilluar është e listuar veçmas.</li>
+  </ul>
+</section>
+
+<!-- 12 -->
+<section class="s">
+  <div class="num">12</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Realizimi" data-en="Delivery">Realizimi</span></div>
+  <h2><span data-sq="Pesë faza," data-en="Five phases,">Pesë faza,</span> <em data-sq="pesë linja financimi." data-en="five funding lines.">pesë linja financimi.</em></h2>
+  <table>
+    <tr><th data-sq="Faza" data-en="Phase">Faza</th><th data-sq="Përmbajtja" data-en="Scope">Përmbajtja</th><th data-sq="Ditë" data-en="Days">Ditë</th></tr>
+    <tr><td><b>0</b></td><td data-sq="Auditim përmbajtjeje, inventar URL-sh, taksonomia, matrica e përkthimeve" data-en="Content audit, URL inventory, taxonomy, translation matrix">Auditim përmbajtjeje, inventar URL-sh, taksonomia, matrica e përkthimeve</td><td>4</td></tr>
+    <tr><td><b>1</b></td><td data-sq="Sistemi i dizajnit, plugin-i i modelit, faqet e 7Arte, lajmet, publikimet, stafi" data-en="Design system, model plugin, 7Arte pages, news, publications, team">Sistemi i dizajnit, plugin-i i modelit, faqet e 7Arte, lajmet, publikimet, stafi</td><td>12</td></tr>
+    <tr><td><b>2</b></td><td data-sq="Mikro-faqja Green Fest, edicionet, line-up, programi, sponsorët, vullnetarët" data-en="Green Fest microsite, editions, line-up, programme, sponsors, volunteers">Mikro-faqja Green Fest, edicionet, line-up, programi, sponsorët, vullnetarët</td><td>7</td></tr>
+    <tr><td><b>3</b></td><td data-sq="Mikro-faqja Visit Trepça, turat me rezervim, Kujtesa, dyqani WooCommerce" data-en="Visit Trepça microsite, tours with booking, Kujtesa, WooCommerce shop">Mikro-faqja Visit Trepça, turat me rezervim, Kujtesa, dyqani WooCommerce</td><td>9</td></tr>
+    <tr><td><b>4</b></td><td data-sq="Academy dhe MitroRun, formularët, aplikimet" data-en="Academy and MitroRun, forms, applications">Academy dhe MitroRun, formularët, aplikimet</td><td>5</td></tr>
+    <tr><td><b>5</b></td><td data-sq="Migrimi, ridrejtimet, WPML, QA, performanca, lansimi" data-en="Migration, redirects, WPML, QA, performance, launch">Migrimi, ridrejtimet, WPML, QA, performanca, lansimi</td><td>8</td></tr>
+    <tr><td><b data-sq="Gjithsej" data-en="Total">Gjithsej</b></td><td></td><td class="hl">45</td></tr>
+  </table>
+  <p class="l" data-sq="Fazat janë të ndara qëllimisht, që secila të mund t'i faturohet një projekti tjetër. Faza 0 plus 1 e nxjerr një faqe funksionale, me projektet e tjera si seksione të përkohshme." data-en="The phases are deliberately split so each can be billed to a different project. Phase 0 plus 1 alone ships a working site, with the other projects as holding sections.">Fazat janë të ndara qëllimisht, që secila të mund t'i faturohet një projekti tjetër. Faza 0 plus 1 e nxjerr një faqe funksionale, me projektet e tjera si seksione të përkohshme.</p>
+</section>
+
+<!-- 13 -->
+<section class="s">
+  <div class="num">13</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Koha" data-en="Timing">Koha</span></div>
+  <h2><span data-sq="Dritarja është" data-en="The window is">Dritarja është</span> <em data-sq="oktobër deri shkurt." data-en="October to February.">oktobër deri shkurt.</em></h2>
+  <ul>
+    <li data-sq="Bashkimi i domaineve normalisht kushton <b>15 deri 30 për qind</b> të trafikut organik për dy deri katër muaj, para se të kthehet." data-en="A domain consolidation typically costs <b>15 to 30 percent</b> of organic traffic for two to four months before recovering.">Bashkimi i domaineve normalisht kushton <b>15 deri 30 për qind</b> të trafikut organik për dy deri katër muaj, para se të kthehet.</li>
+    <li data-sq="Ajo ulje <b>nuk duhet të bjerë</b> mbi sezonin e biletave, vullnetarëve dhe sponsorëve të Green Fest." data-en="That dip <b>must not land</b> on Green Fest ticket, volunteer and sponsor season.">Ajo ulje <b>nuk duhet të bjerë</b> mbi sezonin e biletave, vullnetarëve dhe sponsorëve të Green Fest.</li>
+    <li data-sq="Green Fest 16 u mbyll më 3 shtator. Edicioni i ardhshëm nis ndërtimin e trafikut prej majit." data-en="Green Fest 16 closed on 3 September. The next edition starts building traffic from May.">Green Fest 16 u mbyll më 3 shtator. Edicioni i ardhshëm nis ndërtimin e trafikut prej majit.</li>
+    <li data-sq="Nëse 2027 sjell TEH Camp Meeting dhe ngjarje ndërkombëtare, faqja duhet të jetë live deri në tremujorin e parë të 2027." data-en="If 2027 brings the TEH Camp Meeting and international events, the site must be live by Q1 2027.">Nëse 2027 sjell TEH Camp Meeting dhe ngjarje ndërkombëtare, faqja duhet të jetë live deri në tremujorin e parë të 2027.</li>
+  </ul>
+</section>
+
+<!-- 14 -->
+<section class="s">
+  <div class="num">14</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="E vërteta e pakëndshme" data-en="The uncomfortable part">E vërteta e pakëndshme</span></div>
+  <h2><span data-sq="Një faqe" data-en="One website">Një faqe</span> <em data-sq="nuk mirëmbahet vetë." data-en="does not maintain itself.">nuk mirëmbahet vetë.</em></h2>
+  <p class="l" data-sq="7-arte.org është një faqe e vetme dhe ka menu të thyera, kalendar bosh dhe një widget të vdekur. Numri i instalimeve nuk ishte kurrë i vetmi problem." data-en="7-arte.org is a single site and it has broken menus, an empty calendar and a dead widget. The number of installs was never the only problem.">7-arte.org është një faqe e vetme dhe ka menu të thyera, kalendar bosh dhe një widget të vdekur. Numri i instalimeve nuk ishte kurrë i vetmi problem.</p>
+  <div class="cols c2">
+    <div class="bx fill"><div class="t">01</div><h3 data-sq="Një redaktor për çdo projekt" data-en="A named editor per project">Një redaktor për çdo projekt</h3><p data-sq="Me emër, jo ekipi. Plus gjysmë dite trajnim, e llogaritur në buxhet." data-en="By name, not 'the team'. Plus half a day of training, budgeted.">Me emër, jo ekipi. Plus gjysmë dite trajnim, e llogaritur në buxhet.</p></div>
+    <div class="bx fill"><div class="t">02</div><h3 data-sq="Kontratë mirëmbajtjeje" data-en="A maintenance retainer">Kontratë mirëmbajtjeje</h3><p data-sq="€150 deri 250 në muaj: përditësime, backup, monitorim, siguri, ndryshime të vogla dhe raport tremujor." data-en="€150 to 250 per month: updates, backups, monitoring, security, small changes and a quarterly report.">€150 deri 250 në muaj: përditësime, backup, monitorim, siguri, ndryshime të vogla dhe raport tremujor.</p></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="s">
+  <div class="num">15</div>
+  <div class="kick"><span class="pix"><i></i><i></i><i></i><i></i></span><span data-sq="Hapat e radhës" data-en="Next steps">Hapat e radhës</span></div>
+  <h2><em data-sq="Çka duhet prej juve." data-en="What we need from you.">Çka duhet prej juve.</em></h2>
+  <ul>
+    <li data-sq="Fajllat e logove dhe <b>kodet e sakta të ngjyrave</b> për 7 Arte, Green Fest dhe Visit Trepça" data-en="Logo files and the <b>exact colour codes</b> for 7 Arte, Green Fest and Visit Trepça">Fajllat e logove dhe <b>kodet e sakta të ngjyrave</b> për 7 Arte, Green Fest dhe Visit Trepça</li>
+    <li data-sq="<b>Kohëzgjatjet dhe çmimet</b> e turave INside, OUTside dhe Purple Tour" data-en="<b>Durations and prices</b> for the INside, OUTside and Purple tours"><b>Kohëzgjatjet dhe çmimet</b> e turave INside, OUTside dhe Purple Tour</li>
+    <li data-sq="A shet vërtet dyqani i Visit Trepça? Kjo vendos a i vlen WooCommerce 9 ditë pune." data-en="Does the Visit Trepça shop actually sell? That decides whether WooCommerce is worth 9 days.">A shet vërtet dyqani i Visit Trepça? Kjo vendos a i vlen WooCommerce 9 ditë pune.</li>
+    <li data-sq="Milestone-at e vërtetë të historisë, prej 2006 deri 2022" data-en="The real history milestones, from 2006 to 2022">Milestone-at e vërtetë të historisë, prej 2006 deri 2022</li>
+    <li data-sq="<b>Cilat grante janë aktive</b> në tremujorin e katërt, dhe a mund të faturohen fazat veçmas" data-en="<b>Which grants are live</b> in Q4, and whether the phases can be billed separately"><b>Cilat grante janë aktive</b> në tremujorin e katërt, dhe a mund të faturohen fazat veçmas</li>
+    <li data-sq="<b>Kush e redakton</b> secilin projekt pas lansimit, me emër" data-en="<b>Who edits</b> each project after launch, by name"><b>Kush e redakton</b> secilin projekt pas lansimit, me emër</li>
+  </ul>
+</section>
+
+<!-- 16 -->
+<section class="s">
+  <div class="num">16</div>
+  <h1 style="max-width:20ch"><span data-sq="Një platformë." data-en="One platform.">Një platformë.</span> <em data-sq="Katër identitete." data-en="Four identities.">Katër identitete.</em></h1>
+  <p class="l" data-sq="Programet janë si organizohemi. Projektet janë ajo për çka na njohin. Faqja duhet t'i mbajë të dyja." data-en="Programmes are how you organise. Projects are what people know you by. The website has to hold both.">Programet janë si organizohemi. Projektet janë ajo për çka na njohin. Faqja duhet t'i mbajë të dyja.</p>
+  <div class="meta" style="margin-top:clamp(20px,3.4vh,40px)">PAPINGU · info@papingu.com · granit@papingu.com</div>
+</section>
+
+</div>
+
+<footer>
+  <div class="meta"><span id="cur">1</span> / <span id="tot">16</span> &nbsp;·&nbsp; 7 ARTE <span data-sq="KONCEPT" data-en="CONCEPT">KONCEPT</span></div>
+  <div class="ctrls">
+    <div class="lang"><button id="bSQ" class="on">SQ</button><button id="bEN">EN</button></div>
+    <button id="prev" aria-label="Prev">‹</button>
+    <button id="next" aria-label="Next">›</button>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ss=[].slice.call(document.querySelectorAll('.s')),i=0;
+  document.getElementById('tot').textContent=ss.length;
+  var bar=document.getElementById('bar');
+  function go(n){
+    i=Math.max(0,Math.min(ss.length-1,n));
+    ss.forEach(function(s,k){s.classList.toggle('on',k===i)});
+    document.getElementById('cur').textContent=i+1;
+    bar.style.width=((i+1)/ss.length*100)+'%';
+    location.hash='#'+(i+1);
+  }
+  document.getElementById('next').onclick=function(){go(i+1)};
+  document.getElementById('prev').onclick=function(){go(i-1)};
+  document.addEventListener('keydown',function(e){
+    if(['ArrowRight','ArrowDown',' ','PageDown'].indexOf(e.key)>-1){e.preventDefault();go(i+1)}
+    if(['ArrowLeft','ArrowUp','PageUp'].indexOf(e.key)>-1){e.preventDefault();go(i-1)}
+    if(e.key==='Home')go(0); if(e.key==='End')go(ss.length-1);
+  });
+  document.addEventListener('click',function(e){
+    if(e.target.closest('footer')||e.target.closest('a'))return;
+    if(e.clientX>window.innerWidth*0.6)go(i+1);
+    else if(e.clientX<window.innerWidth*0.4)go(i-1);
+  });
+  var x0=null;
+  document.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  document.addEventListener('touchend',function(e){
+    if(x0===null)return; var dx=e.changedTouches[0].clientX-x0;
+    if(Math.abs(dx)>60)go(dx<0?i+1:i-1); x0=null;
+  },{passive:true});
+  function setLang(l){
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-'+l+']').forEach(function(el){
+      var v=el.getAttribute('data-'+l); if(v!==null)el.innerHTML=v;
+    });
+    document.getElementById('bSQ').classList.toggle('on',l==='sq');
+    document.getElementById('bEN').classList.toggle('on',l==='en');
+  }
+  document.getElementById('bSQ').onclick=function(e){e.stopPropagation();setLang('sq')};
+  document.getElementById('bEN').onclick=function(e){e.stopPropagation();setLang('en')};
+  var h=parseInt((location.hash||'#1').slice(1),10);
+  go(isNaN(h)?0:h-1);
+})();
+</script>
+</body>
+</html>
