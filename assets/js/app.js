@@ -13,7 +13,6 @@
   var caps=[
     ['Green Fest',{sq:'Edicioni i 16-të, nën temën REFLEKTO',en:'The sixteenth edition, under the theme REFLEKTO'}],
     ['Visit Trepça',{sq:'Brenda minierës me vizitorë nga Zvicra',en:'Inside the mine with visitors from Switzerland'}],
-    ['MitroRun',{sq:'Tri distanca nëpër qendër të qytetit',en:'Three distances through the centre of the city'}],
     ['7 Arte',{sq:'Marrëveshje me Komunën për mbrojtjen e mjedisit',en:'Environmental agreement with the Municipality'}]
   ];
   var slides=[].slice.call(document.querySelectorAll('#slider .slide'));
@@ -66,7 +65,7 @@
   wireFilter('hf','hn');wireFilter('nf','nn');
 
   var IDX=[
-    ['Green Fest','#/greenfest','Projekt'],['Visit Trepça','#/trepca','Projekt'],['MitroRun','#/mitrorun','Projekt'],
+    ['Green Fest','#/greenfest','Projekt'],['Visit Trepça','#/trepca','Projekt'],
     ['7Arte Academy','#/academy','Projekt'],['Graphic Design','#/ac-gd','Trajnim'],['Filmmaking','#/ac-film','Trajnim'],
     ['3D Animation','#/ac-3d','Trajnim'],['Arkitekturë e qëndrueshme','#/ac-arch','Trajnim'],
     ['Rreth nesh','#/about','Faqe'],['Historia','#/history','Faqe'],['Stafi','#/staff','Faqe'],['Informata','#/info','Faqe'],
@@ -82,7 +81,7 @@
   /* Search dialog (button or Cmd/Ctrl+K): projects and popular pages first,
      live results while typing; arrows move, Enter opens, Esc closes. */
   var COL={Projekt:'#C4186F',Trajnim:'#1560C4',Faqe:'#45454F',Publikim:'#6A45B8','Libër':'#6A45B8',Shërbim:'#45454F',Program:'#8CC63F','Turë':'#6A45B8'};
-  var COLP={'Green Fest':'#8CC63F','Visit Trepça':'#6A45B8','MitroRun':'#E2531F','7Arte Academy':'#1560C4'};
+  var COLP={'Green Fest':'#8CC63F','Visit Trepça':'#6A45B8','7Arte Academy':'#1560C4'};
   var sr=document.getElementById('srch'),si=document.getElementById('sInput'),res=document.getElementById('sRes'),
       start=document.getElementById('sStart'),count=document.getElementById('sCount'),active=-1;
   function opt(r){
@@ -153,10 +152,10 @@
     d.addEventListener('mouseleave',function(){if(hover.matches)d.classList.remove('open')});
   });
 
-  var THEME={greenfest:['t-gf','sn-gf','Green Fest'],trepca:['t-vt','sn-vt','Visit Trepça'],mitrorun:['t-mr','sn-mr','MitroRun'],academy:['t-ac','sn-ac','7Arte Academy'],'ac-gd':['t-ac','sn-ac','7Arte Academy'],'ac-film':['t-ac','sn-ac','7Arte Academy'],'ac-3d':['t-ac','sn-ac','7Arte Academy'],'ac-arch':['t-ac','sn-ac','7Arte Academy']};
+  var THEME={greenfest:['t-gf','sn-gf','Green Fest'],trepca:['t-vt','sn-vt','Visit Trepça'],academy:['t-ac','sn-ac','7Arte Academy'],'ac-gd':['t-ac','sn-ac','7Arte Academy'],'ac-film':['t-ac','sn-ac','7Arte Academy'],'ac-3d':['t-ac','sn-ac','7Arte Academy'],'ac-arch':['t-ac','sn-ac','7Arte Academy']};
   var SUB={about:'sn-ab'};
   var ALIAS={history:'historia',staff:'stafi',info:'informata'};
-  var pages=['home','about','contact','news','greenfest','trepca','mitrorun','culture','past','academy','ac-gd','ac-film','ac-3d','ac-arch','publications','reports-annual','reports-project','research','jobs','services','support','faq'];
+  var pages=['home','about','contact','news','greenfest','trepca','culture','past','academy','ac-gd','ac-film','ac-3d','ac-arch','publications','reports-annual','reports-project','research','jobs','services','support','faq'];
   function route(){
     var raw=location.hash||'#/';
     // A plain #anchor is a section of the page on screen.
