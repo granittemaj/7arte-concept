@@ -21,14 +21,6 @@ function lgFall(img){
 </script>
 <div id="prog"></div>
 
-<div class="util"><div class="wrap">
-  <div><a href="#/faq">FAQ</a><a href="#/contact" data-sq="Kontakt" data-en="Contact">Kontakt</a><a href="#/services" data-sq="Shërbime" data-en="Services">Shërbime</a><a href="#/jobs" data-sq="Punë" data-en="Jobs">Punë</a></div>
-  <div class="r">
-    <button class="srchBtn" id="openSrch">⌕ <span data-sq="Kërko" data-en="Search">Kërko</span></button>
-    <div class="lang"><button id="bSQ" class="on">SQ</button><button id="bEN">EN</button></div>
-  </div>
-</div></div>
-
 <header>
   <div class="wrap nav">
     <a class="logo" href="#/">
@@ -68,7 +60,9 @@ function lgFall(img){
       </div></div>
       <a href="#/services" data-sq="Shërbime" data-en="Services">Shërbime</a>
     </nav>
-    <div style="display:flex;align-items:center;gap:10px">
+    <div class="hdr-r">
+      <button class="srch-btn" id="openSrch" type="button" aria-haspopup="dialog" aria-controls="srch" aria-label="Kërko" data-sq-al="Kërko" data-en-al="Search" title="Ctrl K"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <div class="lang"><button id="bSQ" class="on" type="button">SQ</button><button id="bEN" type="button">EN</button></div>
       <a class="sup" href="#/support" data-sq="Na mbështet" data-en="Support us">Na mbështet</a>
       <button class="burg" id="burg" aria-label="Menu">≡</button>
     </div>
@@ -76,6 +70,10 @@ function lgFall(img){
 </header>
 
 <!-- project sub-navs -->
+<div class="subnav" id="sn-ab"><div class="wrap">
+  <div class="lks"><a href="#/about" style="color:var(--c);font-weight:800" data-sq="Rreth nesh" data-en="About us">Rreth nesh</a><a href="#historia" data-sq="Historia" data-en="History">Historia</a><a href="#stafi" data-sq="Stafi" data-en="Staff">Stafi</a><a href="#informata" data-sq="Informata" data-en="Information">Informata</a></div>
+  <div style="display:flex;gap:12px;align-items:center"><a class="back" href="#/">← 7arte</a></div>
+</div></div>
 <div class="subnav" id="sn-gf"><div class="wrap">
   <div class="lks"><a href="#/greenfest" style="color:var(--c);font-weight:800">Green Fest</a><a href="#gf-about" data-sq="Rreth" data-en="About">Rreth</a><a href="#gf-prog" data-sq="Programi" data-en="Programme">Programi</a><a href="#gf-lineup">Line-up</a><a href="#gf-news" data-sq="Lajme" data-en="News">Lajme</a><a href="#gf-gal" data-sq="Galeria" data-en="Gallery">Galeria</a><a href="#gf-part" data-sq="Sponsorë" data-en="Sponsors">Sponsorë</a></div>
   <div style="display:flex;gap:12px;align-items:center"><a class="act" href="#gf-vol" data-sq="Bëhu vullnetar" data-en="Volunteer">Bëhu vullnetar</a><a class="back" href="#/">← 7arte</a></div>
@@ -93,12 +91,26 @@ function lgFall(img){
   <div style="display:flex;gap:12px;align-items:center"><a class="act" href="#ac-apply" data-sq="Apliko" data-en="Apply">Apliko</a><a class="back" href="#/">← 7arte</a></div>
 </div></div>
 
-<div id="srch">
-  <button class="cl" id="closeSrch">✕</button>
-  <div class="in"><input id="sInput" placeholder="Kërko në 7arte.org…" autocomplete="off"></div>
-  <div class="hint" data-sq="Shkruaj për të kërkuar · ESC për të mbyllur" data-en="Type to search · ESC to close">Shkruaj për të kërkuar · ESC për të mbyllur</div>
-  <div class="res" id="sRes"></div>
-</div>
+<dialog id="srch" class="sx" aria-label="Kërko">
+  <div class="sx-box">
+    <div class="sx-top"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="sInput" type="search" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="true" aria-controls="sx-list" aria-autocomplete="list" aria-label="Kërko" placeholder="Kërko një projekt, një faqe ose një turë…" data-sq-ph="Kërko një projekt, një faqe ose një turë…" data-en-ph="Search a project, a page or a tour…"><button type="button" class="sx-x" id="closeSrch">Esc</button></div>
+    <div class="sx-body" id="sx-list" role="listbox">
+      <div class="sx-start" id="sStart">
+        <p class="sx-h" data-sq="Projektet" data-en="Projects">Projektet</p>
+        <div class="sx-chips">
+          <a class="sx-o sx-chip" role="option" href="#/greenfest" style="--dot:#8CC63F">Green Fest</a>
+          <a class="sx-o sx-chip" role="option" href="#/trepca" style="--dot:#6A45B8">Visit Trepça</a>
+          <a class="sx-o sx-chip" role="option" href="#/mitrorun" style="--dot:#E2531F">MitroRun</a>
+          <a class="sx-o sx-chip" role="option" href="#/academy" style="--dot:#1560C4">7Arte Academy</a>
+        </div>
+        <p class="sx-h" data-sq="Faqe të shpeshta" data-en="Popular pages">Faqe të shpeshta</p>
+        <div id="sPopular"></div>
+      </div>
+      <div class="sx-live" id="sRes" hidden></div>
+    </div>
+    <div class="sx-foot"><span><kbd>↑</kbd><kbd>↓</kbd> <span data-sq="për të lëvizur" data-en="to move">për të lëvizur</span></span><span><kbd>↵</kbd> <span data-sq="për ta hapur" data-en="to open">për ta hapur</span></span><span class="sx-n" id="sCount" aria-live="polite"></span></div>
+  </div>
+</dialog>
 
 <!-- ==================== 7ARTE HOME ==================== -->
 <main class="page live" id="p-home">
@@ -534,20 +546,14 @@ function lgFall(img){
     <p class="lede" style="margin-top:26px" data-sq="Duke parë nevojën për zhvillim kulturor dhe aktivizim të të rinjve, më 2 maj të vitit 2006, me iniciativën e artistëve vendorë u themelua organizata kulturore 7arte." data-en="Seeing the need for cultural development and for young people to be active, on 2 May 2006 local artists founded the cultural organisation 7arte.">Duke parë nevojën për zhvillim kulturor dhe aktivizim të të rinjve, më 2 maj të vitit 2006, me iniciativën e artistëve vendorë u themelua organizata kulturore 7arte.</p>
   </div></div>
   <section style="padding-top:clamp(20px,3vw,40px)"><div class="wrap">
-    <div class="shot mos" data-cols="16" data-rows="6" style="aspect-ratio:16/6;border-radius:16px;margin-bottom:clamp(30px,4.5vw,62px)"><img src="https://www.7-arte.org/wp-content/uploads/2021/12/terasa.png" alt=""></div>
-    <div class="cards">
-      <a class="card" href="#/history"><div class="b"><h3 data-sq="Historia" data-en="History">Historia</h3><p data-sq="Prej 2006 deri sot, njëzet vjet punë kulturore në një qytet të ndarë." data-en="From 2006 to today, twenty years of cultural work in a divided city.">Prej 2006 deri sot, njëzet vjet punë kulturore në një qytet të ndarë.</p><div class="meta">→</div></div></a>
-      <a class="card" href="#/staff"><div class="b"><h3 data-sq="Stafi" data-en="Staff">Stafi</h3><p data-sq="Nëntë njerëz që e mbajnë organizatën, festivalin, turat dhe akademinë." data-en="Nine people who keep the organisation, festival, tours and academy running.">Nëntë njerëz që e mbajnë organizatën, festivalin, turat dhe akademinë.</p><div class="meta">→</div></div></a>
-      <a class="card" href="#/info"><div class="b"><h3 data-sq="Informata" data-en="Information">Informata</h3><p data-sq="Statuti, qeverisja, transparenca dhe të dhënat e regjistrimit." data-en="Statute, governance, transparency and registration details.">Statuti, qeverisja, transparenca dhe të dhënat e regjistrimit.</p><div class="meta">→</div></div></a>
-    </div>
+    <div class="shot mos" data-cols="16" data-rows="6" style="aspect-ratio:16/6;border-radius:16px"><img src="https://www.7-arte.org/wp-content/uploads/2021/12/terasa.png" alt=""></div>
   </div></section>
-</main>
 
-<main class="page" id="p-history">
-  <div class="phero"><div class="wrap">
-    <div class="crumb">7 arte <em>/</em> <span data-sq="Rreth nesh" data-en="About us">Rreth nesh</span> <em>/</em> <span data-sq="Historia" data-en="History">Historia</span></div>
-    <h1><span data-sq="Njëzet vjet," data-en="Twenty years,">Njëzet vjet,</span> <em data-sq="një qytet." data-en="one city.">një qytet.</em></h1>
-  </div></div>
+  <div class="chapter" id="historia">
+    <div class="chapter-head"><div class="wrap">
+      <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Historia" data-en="History">Historia</span></div>
+      <h2 class="obs"><span data-sq="Njëzet vjet," data-en="Twenty years,">Njëzet vjet,</span> <em data-sq="një qytet." data-en="one city.">një qytet.</em></h2>
+    </div></div>
   <section style="padding-top:clamp(20px,3vw,40px)"><div class="wrap grid2">
     <div class="obs tl">
       <div><b>2006</b><p data-sq="Themelohet 7arte më 2 maj, me iniciativën e artistëve vendorë të Mitrovicës." data-en="7arte is founded on 2 May, on the initiative of local artists in Mitrovica.">Themelohet 7arte më 2 maj, me iniciativën e artistëve vendorë të Mitrovicës.</p></div>
@@ -557,31 +563,31 @@ function lgFall(img){
     </div>
     <div class="obs"><div class="shot mos" data-cols="10" data-rows="10" style="aspect-ratio:3/4;border-radius:16px"><img src="https://www.7-arte.org/wp-content/uploads/2026/05/694663324_1423858059771620_644636740689303126_n.jpg" alt=""></div></div>
   </div></section>
-</main>
+  </div>
 
-<main class="page" id="p-staff">
-  <div class="phero"><div class="wrap">
-    <div class="crumb">7 arte <em>/</em> <span data-sq="Rreth nesh" data-en="About us">Rreth nesh</span> <em>/</em> <span data-sq="Stafi" data-en="Staff">Stafi</span></div>
-    <h1><span data-sq="Nëntë" data-en="Nine">Nëntë</span> <em data-sq="njerëz." data-en="people.">njerëz.</em></h1>
-  </div></div>
+  <div class="chapter" id="stafi">
+    <div class="chapter-head"><div class="wrap">
+      <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Stafi" data-en="Staff">Stafi</span></div>
+      <h2 class="obs"><span data-sq="Nëntë" data-en="Nine">Nëntë</span> <em data-sq="njerëz." data-en="people.">njerëz.</em></h2>
+    </div></div>
   <section style="padding-top:clamp(20px,3vw,40px)"><div class="wrap"><div class="people obs">
-    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/051A2289-scaled.jpg" alt=""></div><b>Lulzim</b><span data-sq="Drejtor ekzekutiv" data-en="Executive director">Drejtor ekzekutiv</span><a href="mailto:lulzimhoti@7-arte.org">lulzimhoti@7-arte.org</a></div>
-    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-28-at-10.08.07.jpeg" alt=""></div><b>Rinor</b><span data-sq="Menaxher programi" data-en="Program manager">Menaxher programi</span><a href="mailto:rinor@7-arte.org">rinor@7-arte.org</a></div>
-    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/051A2236-scaled.jpg" alt=""></div><b>Ardiana</b><span data-sq="Financa dhe HR" data-en="Finance and HR">Financa dhe HR</span><a href="mailto:financa@7-arte.org">financa@7-arte.org</a></div>
-    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/051A9476-scaled.jpg" alt=""></div><b>Diellza</b><span data-sq="Koordinatore programi" data-en="Program coordinator">Koordinatore programi</span><a href="mailto:diellza@7-arte.org">diellza@7-arte.org</a></div>
-    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/051A2260-scaled.jpg" alt=""></div><b>Gzim</b><span data-sq="M&E dhe operacione" data-en="M&E and operations">M&amp;E dhe operacione</span><a href="mailto:gzim@7-arte.org">gzim@7-arte.org</a></div>
-    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/Kusha-1.jpg" alt=""></div><b>Kushtrim</b><span data-sq="Menaxher produksioni" data-en="Production manager">Menaxher produksioni</span><a href="mailto:kushtrim@7-arte.org">kushtrim@7-arte.org</a></div>
-    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-16-at-14.02.58-1copy-1.jpeg" alt=""></div><b>Yll</b><span data-sq="Dizajner grafik" data-en="Graphic designer">Dizajner grafik</span><a href="#/ac-gd" data-sq="Mentor në Academy" data-en="Academy mentor">Mentor në Academy</a></div>
-    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-27-at-15.29.48.jpeg" alt=""></div><b>Alketa</b><span data-sq="Zyrtare e programit mjedisor" data-en="Environmental program officer">Zyrtare e programit mjedisor</span><a href="mailto:alketa@7-arte.org">alketa@7-arte.org</a></div>
-    <div class="pp"><div class="shot mos" data-cols="7" data-rows="7"><img src="https://mitrovicagreenfest.com/wp-content/uploads/2026/04/051A9105-scaled.jpg" alt=""></div><b>Christian</b><span data-sq="Vullnetar i Peace Corps" data-en="Peace Corps volunteer">Vullnetar i Peace Corps</span><a href="mailto:christian@7-arte.org">christian@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="8" data-rows="10"><img src="assets/img/staff/lulzim.jpg" alt="Lulzim Hoti" loading="lazy"></div><b>Lulzim Hoti</b><span data-sq="Drejtor ekzekutiv" data-en="Executive director">Drejtor ekzekutiv</span><a href="mailto:lulzimhoti@7-arte.org">lulzimhoti@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="8" data-rows="10"><img src="assets/img/staff/rinor.jpg" alt="Rinor Kurshumliu" loading="lazy"></div><b>Rinor Kurshumliu</b><span data-sq="Menaxher programi" data-en="Program manager">Menaxher programi</span><a href="mailto:rinor@7-arte.org">rinor@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="8" data-rows="10"><img src="assets/img/staff/ardiana.jpg" alt="Ardiana Koliqi-Metrama" loading="lazy"></div><b>Ardiana Koliqi-Metrama</b><span data-sq="Financa dhe HR" data-en="Finance and HR">Financa dhe HR</span><a href="mailto:financa@7-arte.org">financa@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="8" data-rows="10"><img src="assets/img/staff/diellza.jpg" alt="Diellza Jëlliqi" loading="lazy"></div><b>Diellza Jëlliqi</b><span data-sq="Koordinatore programi" data-en="Program coordinator">Koordinatore programi</span><a href="mailto:diellza@7-arte.org">diellza@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="8" data-rows="10"><img src="assets/img/staff/gzim.jpg" alt="Gzim Zhilivoda" loading="lazy"></div><b>Gzim Zhilivoda</b><span data-sq="M&E dhe operacione" data-en="M&E and operations">M&amp;E dhe operacione</span><a href="mailto:gzim@7-arte.org">gzim@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="8" data-rows="10"><img src="assets/img/staff/kushtrim.jpg" alt="Kushtrim Hoti" loading="lazy"></div><b>Kushtrim Hoti</b><span data-sq="Menaxher produksioni" data-en="Production manager">Menaxher produksioni</span><a href="mailto:kushtrim@7-arte.org">kushtrim@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="8" data-rows="10"><img src="assets/img/staff/yll.jpg" alt="Yll Haxhiu" loading="lazy"></div><b>Yll Haxhiu</b><span data-sq="Dizajner grafik" data-en="Graphic designer">Dizajner grafik</span><a href="#/ac-gd" data-sq="Mentor në Academy" data-en="Academy mentor">Mentor në Academy</a></div>
+    <div class="pp"><div class="shot mos" data-cols="8" data-rows="10"><img src="assets/img/staff/alketa.jpg" alt="Alketa" loading="lazy"></div><b>Alketa</b><span data-sq="Zyrtare e programit mjedisor" data-en="Environmental program officer">Zyrtare e programit mjedisor</span><a href="mailto:alketa@7-arte.org">alketa@7-arte.org</a></div>
+    <div class="pp"><div class="shot mos" data-cols="8" data-rows="10"><img src="assets/img/staff/christian.jpg" alt="Christian Gustin" loading="lazy"></div><b>Christian Gustin</b><span data-sq="Vullnetar i Peace Corps" data-en="Peace Corps volunteer">Vullnetar i Peace Corps</span><a href="mailto:christian@7-arte.org">christian@7-arte.org</a></div>
   </div></div></section>
-</main>
+  </div>
 
-<main class="page" id="p-info">
-  <div class="phero"><div class="wrap">
-    <div class="crumb">7 arte <em>/</em> <span data-sq="Rreth nesh" data-en="About us">Rreth nesh</span> <em>/</em> <span data-sq="Informata" data-en="Information">Informata</span></div>
-    <h1><span data-sq="Si" data-en="How we">Si</span> <em data-sq="funksionojmë." data-en="operate.">funksionojmë.</em></h1>
-  </div></div>
+  <div class="chapter" id="informata">
+    <div class="chapter-head"><div class="wrap">
+      <div class="kick mono obs"><span class="pixrow"><i></i><i></i><i></i><i></i></span><span data-sq="Informata" data-en="Information">Informata</span></div>
+      <h2 class="obs"><span data-sq="Si" data-en="How we">Si</span> <em data-sq="funksionojmë." data-en="operate.">funksionojmë.</em></h2>
+    </div></div>
   <section style="padding-top:clamp(20px,3vw,40px)"><div class="wrap grid2">
     <div class="obs"><h3 class="sub" data-sq="Të dhënat" data-en="Details">Të dhënat</h3><div class="rows">
       <div class="rw"><span class="n">01</span><b data-sq="Emri i plotë" data-en="Full name">Emri i plotë</b><i>OJQ 7 ARTE</i></div>
@@ -598,6 +604,7 @@ function lgFall(img){
       <div class="rw"><span class="n">05</span><b data-sq="Politika e cookies" data-en="Cookie policy">Politika e cookies</b><i>→</i></div>
     </div></div>
   </div></section>
+  </div>
 </main>
 
 <main class="page" id="p-contact">
@@ -858,7 +865,7 @@ function lgFall(img){
       <div><h5 data-sq="Organizata" data-en="Organisation">Organizata</h5><a href="#/about" data-sq="Rreth nesh" data-en="About us">Rreth nesh</a><a href="#/history" data-sq="Historia" data-en="History">Historia</a><a href="#/staff" data-sq="Stafi" data-en="Staff">Stafi</a><a href="#/news" data-sq="Lajme" data-en="News">Lajme</a><a href="#/publications" data-sq="Publikime" data-en="Publications">Publikime</a></div>
       <div><h5 data-sq="Përfshihu" data-en="Get involved">Përfshihu</h5><a href="#/support" data-sq="Dhuro" data-en="Donate">Dhuro</a><a href="#/jobs" data-sq="Punë" data-en="Jobs">Punë</a><a href="#/services" data-sq="Shërbime" data-en="Services">Shërbime</a><a href="#/contact" data-sq="Kontakt" data-en="Contact">Kontakt</a><a href="#/faq">FAQ</a></div>
     </div>
-    <div class="fb"><span>© 2026 7arte · Mitrovicë, Kosovë</span><span data-sq="Koncept, jo dizajn përfundimtar" data-en="Concept, not a final design">Koncept, jo dizajn përfundimtar</span><span>Papingu</span></div>
+    <div class="fb"><span>© 2026 7arte · Mitrovicë, Kosovë</span><span data-sq="Koncept, jo dizajn përfundimtar" data-en="Concept, not a final design">Koncept, jo dizajn përfundimtar</span><a class="credit" href="https://papingu.com/" target="_blank" rel="noopener">papingu.</a></div>
   </div>
 </footer>
 
